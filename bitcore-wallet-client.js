@@ -25246,7 +25246,7 @@ Client.errors = require('./lib/errors');
 (function (Buffer){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var $ = require('preconditions').singleton();
 var util = require('util');
 var async = require('async');
@@ -27747,7 +27747,7 @@ API.prototype.createWalletFromOldCopay = function(username, password, blob, cb) 
 module.exports = API;
 
 }).call(this,require("buffer").Buffer)
-},{"../package.json":387,"./common":174,"./credentials":176,"./errors":177,"./log":180,"./paypro":181,"./verifier":182,"async":198,"bip38":203,"bitcore-lib-square":204,"bitcore-mnemonic-square":300,"buffer":47,"events":84,"json-stable-stringify":348,"l*o*d*a*s*h":353,"preconditions":361,"querystring":130,"sjcl":378,"superagent":379,"url":162,"util":167}],172:[function(require,module,exports){
+},{"../package.json":387,"./common":174,"./credentials":176,"./errors":177,"./log":180,"./paypro":181,"./verifier":182,"async":198,"bip38":203,"bitcore-lib-square":204,"bitcore-mnemonic-square":300,"buffer":47,"events":84,"json-stable-stringify":348,"lodash":353,"preconditions":361,"querystring":130,"sjcl":378,"superagent":379,"url":162,"util":167}],172:[function(require,module,exports){
 'use strict';
 
 var Constants = {};
@@ -27822,7 +27822,7 @@ module.exports = Common;
 (function (Buffer){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var $ = require('preconditions').singleton();
 var sjcl = require('sjcl');
 var Stringify = require('json-stable-stringify');
@@ -28059,12 +28059,12 @@ Utils.buildTx = function(txp) {
 module.exports = Utils;
 
 }).call(this,require("buffer").Buffer)
-},{"./constants":172,"./defaults":173,"bitcore-lib-square":204,"buffer":47,"json-stable-stringify":348,"l*o*d*a*s*h":353,"preconditions":361,"sjcl":378}],176:[function(require,module,exports){
+},{"./constants":172,"./defaults":173,"bitcore-lib-square":204,"buffer":47,"json-stable-stringify":348,"lodash":353,"preconditions":361,"sjcl":378}],176:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
 var $ = require('preconditions').singleton();
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 
 var Bitcore = require('bitcore-lib-square');
 var Mnemonic = require('bitcore-mnemonic-square');
@@ -28533,10 +28533,10 @@ Credentials.fromOldCopayWallet = function(w) {
 module.exports = Credentials;
 
 }).call(this,require("buffer").Buffer)
-},{"./common":174,"bitcore-lib-square":204,"bitcore-mnemonic-square":300,"buffer":47,"l*o*d*a*s*h":353,"preconditions":361,"sjcl":378}],177:[function(require,module,exports){
+},{"./common":174,"bitcore-lib-square":204,"bitcore-mnemonic-square":300,"buffer":47,"lodash":353,"preconditions":361,"sjcl":378}],177:[function(require,module,exports){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 
 function format(message, args) {
   return message
@@ -28596,7 +28596,7 @@ module.exports.extend = function(spec) {
   return traverseNode(bwc.Error, spec);
 };
 
-},{"./spec":178,"l*o*d*a*s*h":353}],178:[function(require,module,exports){
+},{"./spec":178,"lodash":353}],178:[function(require,module,exports){
 'use strict';
 
 var errorSpec = [{
@@ -28690,7 +28690,7 @@ client.sjcl = require('sjcl');
 client.Bitcore = require('bitcore-lib-square');
 
 },{"./api":171,"./common/utils":175,"./verifier":182,"bitcore-lib-square":204,"sjcl":378}],180:[function(require,module,exports){
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 
 var DEFAULT_LOG_LEVEL = 'silent';
 
@@ -28826,7 +28826,7 @@ Logger.prototype.setLevel = function(level) {
 var logger = new Logger('copay');
 module.exports = logger;
 
-},{"l*o*d*a*s*h":353}],181:[function(require,module,exports){
+},{"lodash":353}],181:[function(require,module,exports){
 (function (process,Buffer){
 var $ = require('preconditions').singleton();
 
@@ -29080,7 +29080,7 @@ module.exports = PayPro;
 }).call(this,require('_process'),require("buffer").Buffer)
 },{"_process":120,"bitcore-lib-square":204,"bitcore-payment-protocol-square":311,"buffer":47,"http":156,"https":100,"preconditions":361}],182:[function(require,module,exports){
 var $ = require('preconditions').singleton();
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 
 var Bitcore = require('bitcore-lib-square');
 
@@ -29284,7 +29284,7 @@ Verifier.checkTxProposal = function(credentials, txp, opts) {
 
 module.exports = Verifier;
 
-},{"./common":174,"./log":180,"bitcore-lib-square":204,"l*o*d*a*s*h":353,"preconditions":361}],183:[function(require,module,exports){
+},{"./common":174,"./log":180,"bitcore-lib-square":204,"lodash":353,"preconditions":361}],183:[function(require,module,exports){
 arguments[4][2][0].apply(exports,arguments)
 },{"./asn1/api":184,"./asn1/base":186,"./asn1/constants":190,"./asn1/decoders":192,"./asn1/encoders":195,"bn.js":315,"dup":2}],184:[function(require,module,exports){
 var asn1 = require('../asn1');
@@ -34848,17 +34848,17 @@ bitcore.deps.bnjs = require('bn.js');
 bitcore.deps.bs58 = require('bs58');
 bitcore.deps.Buffer = Buffer;
 bitcore.deps.elliptic = require('elliptic');
-bitcore.deps._ = require('l*o*d*a*s*h');
+bitcore.deps._ = require('lodash');
 
 // Internal usage, exposed for testing/advanced tweaking
 bitcore.Transaction.sighash = require('./lib/transaction/sighash');
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"./lib/address":205,"./lib/block":208,"./lib/block/blockheader":207,"./lib/block/merkleblock":209,"./lib/crypto/bn":210,"./lib/crypto/ecdsa":211,"./lib/crypto/hash":212,"./lib/crypto/point":213,"./lib/crypto/random":214,"./lib/crypto/signature":215,"./lib/encoding/base58":216,"./lib/encoding/base58check":217,"./lib/encoding/bufferreader":218,"./lib/encoding/bufferwriter":219,"./lib/encoding/varint":220,"./lib/errors":221,"./lib/govobject":224,"./lib/hdprivatekey.js":226,"./lib/hdpublickey.js":227,"./lib/networks":228,"./lib/opcode":229,"./lib/privatekey":230,"./lib/publickey":231,"./lib/script":232,"./lib/transaction":235,"./lib/transaction/sighash":243,"./lib/unit":247,"./lib/uri":248,"./lib/util/buffer":249,"./lib/util/js":250,"./lib/util/preconditions":251,"./package.json":299,"bn.js":252,"bs58":253,"buffer":47,"elliptic":255,"l*o*d*a*s*h":277}],205:[function(require,module,exports){
+},{"./lib/address":205,"./lib/block":208,"./lib/block/blockheader":207,"./lib/block/merkleblock":209,"./lib/crypto/bn":210,"./lib/crypto/ecdsa":211,"./lib/crypto/hash":212,"./lib/crypto/point":213,"./lib/crypto/random":214,"./lib/crypto/signature":215,"./lib/encoding/base58":216,"./lib/encoding/base58check":217,"./lib/encoding/bufferreader":218,"./lib/encoding/bufferwriter":219,"./lib/encoding/varint":220,"./lib/errors":221,"./lib/govobject":224,"./lib/hdprivatekey.js":226,"./lib/hdpublickey.js":227,"./lib/networks":228,"./lib/opcode":229,"./lib/privatekey":230,"./lib/publickey":231,"./lib/script":232,"./lib/transaction":235,"./lib/transaction/sighash":243,"./lib/unit":247,"./lib/uri":248,"./lib/util/buffer":249,"./lib/util/js":250,"./lib/util/preconditions":251,"./package.json":299,"bn.js":252,"bs58":253,"buffer":47,"elliptic":255,"lodash":277}],205:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var $ = require('./util/preconditions');
 var errors = require('./errors');
 var Base58Check = require('./encoding/base58check');
@@ -35356,11 +35356,11 @@ module.exports = Address;
 var Script = require('./script');
 
 }).call(this,require("buffer").Buffer)
-},{"./crypto/hash":212,"./encoding/base58check":217,"./errors":221,"./networks":228,"./publickey":231,"./script":232,"./util/js":250,"./util/preconditions":251,"buffer":47,"l*o*d*a*s*h":277}],206:[function(require,module,exports){
+},{"./crypto/hash":212,"./encoding/base58check":217,"./errors":221,"./networks":228,"./publickey":231,"./script":232,"./util/js":250,"./util/preconditions":251,"buffer":47,"lodash":277}],206:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var BlockHeader = require('./blockheader');
 var BN = require('../crypto/bn');
 var BufferUtil = require('../util/buffer');
@@ -35641,11 +35641,11 @@ Block.Values = {
 module.exports = Block;
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/bn":210,"../crypto/hash":212,"../encoding/bufferreader":218,"../encoding/bufferwriter":219,"../transaction":235,"../util/buffer":249,"../util/preconditions":251,"./blockheader":207,"buffer":47,"l*o*d*a*s*h":277}],207:[function(require,module,exports){
+},{"../crypto/bn":210,"../crypto/hash":212,"../encoding/bufferreader":218,"../encoding/bufferwriter":219,"../transaction":235,"../util/buffer":249,"../util/preconditions":251,"./blockheader":207,"buffer":47,"lodash":277}],207:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var BN = require('../crypto/bn');
 var BufferUtil = require('../util/buffer');
 var BufferReader = require('../encoding/bufferreader');
@@ -35942,7 +35942,7 @@ BlockHeader.Constants = {
 module.exports = BlockHeader;
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/bn":210,"../crypto/hash":212,"../encoding/bufferreader":218,"../encoding/bufferwriter":219,"../util/buffer":249,"../util/js":250,"../util/preconditions":251,"buffer":47,"l*o*d*a*s*h":277}],208:[function(require,module,exports){
+},{"../crypto/bn":210,"../crypto/hash":212,"../encoding/bufferreader":218,"../encoding/bufferwriter":219,"../util/buffer":249,"../util/js":250,"../util/preconditions":251,"buffer":47,"lodash":277}],208:[function(require,module,exports){
 module.exports = require('./block');
 
 module.exports.BlockHeader = require('./blockheader');
@@ -35952,7 +35952,7 @@ module.exports.MerkleBlock = require('./merkleblock');
 (function (Buffer){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var BlockHeader = require('./blockheader');
 var BufferUtil = require('../util/buffer');
 var BufferReader = require('../encoding/bufferreader');
@@ -36224,13 +36224,13 @@ MerkleBlock.fromObject = function fromObject(obj) {
 module.exports = MerkleBlock;
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/hash":212,"../encoding/bufferreader":218,"../encoding/bufferwriter":219,"../transaction":235,"../util/buffer":249,"../util/js":250,"../util/preconditions":251,"./blockheader":207,"buffer":47,"l*o*d*a*s*h":277}],210:[function(require,module,exports){
+},{"../crypto/hash":212,"../encoding/bufferreader":218,"../encoding/bufferwriter":219,"../transaction":235,"../util/buffer":249,"../util/js":250,"../util/preconditions":251,"./blockheader":207,"buffer":47,"lodash":277}],210:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
 var BN = require('bn.js');
 var $ = require('../util/preconditions');
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 
 var reversebuf = function(buf) {
   var buf2 = new Buffer(buf.length);
@@ -36430,7 +36430,7 @@ BN.pad = function(buf, natlen, size) {
 module.exports = BN;
 
 }).call(this,require("buffer").Buffer)
-},{"../util/preconditions":251,"bn.js":252,"buffer":47,"l*o*d*a*s*h":277}],211:[function(require,module,exports){
+},{"../util/preconditions":251,"bn.js":252,"buffer":47,"lodash":277}],211:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -36441,7 +36441,7 @@ var PublicKey = require('../publickey');
 var Random = require('./random');
 var Hash = require('./hash');
 var BufferUtil = require('../util/buffer');
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 
 var ECDSA = function ECDSA(obj) {
@@ -36730,7 +36730,7 @@ ECDSA.verify = function(hashbuf, sig, pubkey, endian) {
 module.exports = ECDSA;
 
 }).call(this,require("buffer").Buffer)
-},{"../publickey":231,"../util/buffer":249,"../util/preconditions":251,"./bn":210,"./hash":212,"./point":213,"./random":214,"./signature":215,"buffer":47,"l*o*d*a*s*h":277}],212:[function(require,module,exports){
+},{"../publickey":231,"../util/buffer":249,"../util/preconditions":251,"./bn":210,"./hash":212,"./point":213,"./random":214,"./signature":215,"buffer":47,"lodash":277}],212:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -37041,7 +37041,7 @@ module.exports = Random;
 'use strict';
 
 var BN = require('./bn');
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 var BufferUtil = require('../util/buffer');
 var JSUtil = require('../util/js');
@@ -37352,11 +37352,11 @@ Signature.SIGHASH_ANYONECANPAY = 0x80;
 module.exports = Signature;
 
 }).call(this,require("buffer").Buffer)
-},{"../util/buffer":249,"../util/js":250,"../util/preconditions":251,"./bn":210,"buffer":47,"l*o*d*a*s*h":277}],216:[function(require,module,exports){
+},{"../util/buffer":249,"../util/js":250,"../util/preconditions":251,"./bn":210,"buffer":47,"lodash":277}],216:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var bs58 = require('bs58');
 var buffer = require('buffer');
 
@@ -37426,11 +37426,11 @@ Base58.prototype.toString = function() {
 module.exports = Base58;
 
 }).call(this,require("buffer").Buffer)
-},{"bs58":253,"buffer":47,"l*o*d*a*s*h":277}],217:[function(require,module,exports){
+},{"bs58":253,"buffer":47,"lodash":277}],217:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var Base58 = require('./base58');
 var buffer = require('buffer');
 var sha256sha256 = require('../crypto/hash').sha256sha256;
@@ -37525,11 +37525,11 @@ Base58Check.prototype.toString = function() {
 module.exports = Base58Check;
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/hash":212,"./base58":216,"buffer":47,"l*o*d*a*s*h":277}],218:[function(require,module,exports){
+},{"../crypto/hash":212,"./base58":216,"buffer":47,"lodash":277}],218:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 var BufferUtil = require('../util/buffer');
 var BN = require('../crypto/bn');
@@ -37727,7 +37727,7 @@ BufferReader.prototype.readReverse = function(len) {
 module.exports = BufferReader;
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/bn":210,"../util/buffer":249,"../util/preconditions":251,"buffer":47,"l*o*d*a*s*h":277}],219:[function(require,module,exports){
+},{"../crypto/bn":210,"../util/buffer":249,"../util/preconditions":251,"buffer":47,"lodash":277}],219:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -37961,7 +37961,7 @@ module.exports = Varint;
 },{"../crypto/bn":210,"./bufferreader":218,"./bufferwriter":219,"buffer":47}],221:[function(require,module,exports){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 
 function format(message, args) {
   return message
@@ -38021,7 +38021,7 @@ module.exports.extend = function(spec) {
   return traverseNode(bitcore.Error, spec);
 };
 
-},{"./spec":222,"l*o*d*a*s*h":277}],222:[function(require,module,exports){
+},{"./spec":222,"lodash":277}],222:[function(require,module,exports){
 'use strict';
 
 var docsURL = 'http://bitcore.io/';
@@ -38230,7 +38230,7 @@ module.exports = [{
 (function (Buffer){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 var buffer = require('buffer');
 var compare = Buffer.compare || require('buffer-compare');
@@ -38433,7 +38433,7 @@ GovObject.shallowCopy = function(govObject) {
 module.exports = GovObject;
 
 }).call(this,require("buffer").Buffer)
-},{"../address":205,"../encoding/bufferreader":218,"../encoding/bufferwriter":219,"../errors":221,"../util/buffer":249,"../util/js":250,"../util/preconditions":251,"buffer":47,"buffer-compare":254,"l*o*d*a*s*h":277}],224:[function(require,module,exports){
+},{"../address":205,"../encoding/bufferreader":218,"../encoding/bufferwriter":219,"../errors":221,"../util/buffer":249,"../util/js":250,"../util/preconditions":251,"buffer":47,"buffer-compare":254,"lodash":277}],224:[function(require,module,exports){
 module.exports = require('./govobject');
 
 module.exports.Proposal = require('./types/proposal');
@@ -38441,7 +38441,7 @@ module.exports.Proposal = require('./types/proposal');
 },{"./govobject":223,"./types/proposal":225}],225:[function(require,module,exports){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var $ = require('../../util/preconditions');
 var GovObject = require('../govobject');
 var errors = require('../../errors');
@@ -38600,14 +38600,14 @@ Proposal.prototype.getSerializationError = function(opts) {
 
 module.exports = Proposal;
 
-},{"../../errors":221,"../../util/preconditions":251,"../govobject":223,"l*o*d*a*s*h":277,"util":167}],226:[function(require,module,exports){
+},{"../../errors":221,"../../util/preconditions":251,"../govobject":223,"lodash":277,"util":167}],226:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
 
 var assert = require('assert');
 var buffer = require('buffer');
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var $ = require('./util/preconditions');
 
 var BN = require('./crypto/bn');
@@ -39250,11 +39250,11 @@ assert(HDPrivateKey.ChecksumEnd === HDPrivateKey.SerializedByteSize);
 module.exports = HDPrivateKey;
 
 }).call(this,require("buffer").Buffer)
-},{"./crypto/bn":210,"./crypto/hash":212,"./crypto/point":213,"./crypto/random":214,"./encoding/base58":216,"./encoding/base58check":217,"./errors":221,"./hdpublickey":227,"./networks":228,"./privatekey":230,"./util/buffer":249,"./util/js":250,"./util/preconditions":251,"assert":16,"buffer":47,"l*o*d*a*s*h":277}],227:[function(require,module,exports){
+},{"./crypto/bn":210,"./crypto/hash":212,"./crypto/point":213,"./crypto/random":214,"./encoding/base58":216,"./encoding/base58check":217,"./errors":221,"./hdpublickey":227,"./networks":228,"./privatekey":230,"./util/buffer":249,"./util/js":250,"./util/preconditions":251,"assert":16,"buffer":47,"lodash":277}],227:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var $ = require('./util/preconditions');
 
 var BN = require('./crypto/bn');
@@ -39750,9 +39750,9 @@ assert(HDPublicKey.ChecksumEnd === HDPublicKey.SerializedByteSize);
 module.exports = HDPublicKey;
 
 }).call(this,require("buffer").Buffer)
-},{"./crypto/bn":210,"./crypto/hash":212,"./crypto/point":213,"./encoding/base58":216,"./encoding/base58check":217,"./errors":221,"./hdprivatekey":226,"./networks":228,"./publickey":231,"./util/buffer":249,"./util/js":250,"./util/preconditions":251,"assert":16,"buffer":47,"l*o*d*a*s*h":277}],228:[function(require,module,exports){
+},{"./crypto/bn":210,"./crypto/hash":212,"./crypto/point":213,"./encoding/base58":216,"./encoding/base58check":217,"./errors":221,"./hdprivatekey":226,"./networks":228,"./publickey":231,"./util/buffer":249,"./util/js":250,"./util/preconditions":251,"assert":16,"buffer":47,"lodash":277}],228:[function(require,module,exports){
 'use strict';
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 
 var BufferUtil = require('./util/buffer');
 var JSUtil = require('./util/js');
@@ -40013,11 +40013,11 @@ module.exports = {
   disableRegtest: disableRegtest
 };
 
-},{"./util/buffer":249,"./util/js":250,"l*o*d*a*s*h":277}],229:[function(require,module,exports){
+},{"./util/buffer":249,"./util/js":250,"lodash":277}],229:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var $ = require('./util/preconditions');
 var BufferUtil = require('./util/buffer');
 var JSUtil = require('./util/js');
@@ -40265,11 +40265,11 @@ Opcode.prototype.inspect = function() {
 module.exports = Opcode;
 
 }).call(this,require("buffer").Buffer)
-},{"./util/buffer":249,"./util/js":250,"./util/preconditions":251,"buffer":47,"l*o*d*a*s*h":277}],230:[function(require,module,exports){
+},{"./util/buffer":249,"./util/js":250,"./util/preconditions":251,"buffer":47,"lodash":277}],230:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var Address = require('./address');
 var Base58Check = require('./encoding/base58check');
 var BN = require('./crypto/bn');
@@ -40669,7 +40669,7 @@ PrivateKey.prototype.inspect = function() {
 module.exports = PrivateKey;
 
 }).call(this,require("buffer").Buffer)
-},{"./address":205,"./crypto/bn":210,"./crypto/point":213,"./crypto/random":214,"./encoding/base58check":217,"./networks":228,"./publickey":231,"./util/js":250,"./util/preconditions":251,"buffer":47,"l*o*d*a*s*h":277}],231:[function(require,module,exports){
+},{"./address":205,"./crypto/bn":210,"./crypto/point":213,"./crypto/random":214,"./encoding/base58check":217,"./networks":228,"./publickey":231,"./util/js":250,"./util/preconditions":251,"buffer":47,"lodash":277}],231:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -40678,7 +40678,7 @@ var Point = require('./crypto/point');
 var Hash = require('./crypto/hash');
 var JSUtil = require('./util/js');
 var Network = require('./networks');
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var $ = require('./util/preconditions');
 
 /**
@@ -41066,7 +41066,7 @@ PublicKey.prototype.inspect = function() {
 module.exports = PublicKey;
 
 }).call(this,require("buffer").Buffer)
-},{"./address":205,"./crypto/bn":210,"./crypto/hash":212,"./crypto/point":213,"./networks":228,"./privatekey":230,"./util/js":250,"./util/preconditions":251,"buffer":47,"l*o*d*a*s*h":277}],232:[function(require,module,exports){
+},{"./address":205,"./crypto/bn":210,"./crypto/hash":212,"./crypto/point":213,"./networks":228,"./privatekey":230,"./util/js":250,"./util/preconditions":251,"buffer":47,"lodash":277}],232:[function(require,module,exports){
 module.exports = require('./script');
 
 module.exports.Interpreter = require('./interpreter');
@@ -41075,7 +41075,7 @@ module.exports.Interpreter = require('./interpreter');
 (function (Buffer){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 
 var Script = require('./script');
 var Opcode = require('../opcode');
@@ -42340,7 +42340,7 @@ Interpreter.prototype.step = function() {
 
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/bn":210,"../crypto/hash":212,"../crypto/signature":215,"../opcode":229,"../publickey":231,"../transaction":235,"./script":234,"buffer":47,"l*o*d*a*s*h":277}],234:[function(require,module,exports){
+},{"../crypto/bn":210,"../crypto/hash":212,"../crypto/signature":215,"../opcode":229,"../publickey":231,"../transaction":235,"./script":234,"buffer":47,"lodash":277}],234:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -42353,7 +42353,7 @@ var PublicKey = require('../publickey');
 var Signature = require('../crypto/signature');
 var Networks = require('../networks');
 var $ = require('../util/preconditions');
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var errors = require('../errors');
 var buffer = require('buffer');
 var BufferUtil = require('../util/buffer');
@@ -43428,7 +43428,7 @@ Script.prototype.getSignatureOperationsCount = function(accurate) {
 module.exports = Script;
 
 }).call(this,require("buffer").Buffer)
-},{"../address":205,"../crypto/hash":212,"../crypto/signature":215,"../encoding/bufferreader":218,"../encoding/bufferwriter":219,"../errors":221,"../networks":228,"../opcode":229,"../publickey":231,"../util/buffer":249,"../util/js":250,"../util/preconditions":251,"buffer":47,"l*o*d*a*s*h":277}],235:[function(require,module,exports){
+},{"../address":205,"../crypto/hash":212,"../crypto/signature":215,"../encoding/bufferreader":218,"../encoding/bufferwriter":219,"../errors":221,"../networks":228,"../opcode":229,"../publickey":231,"../util/buffer":249,"../util/js":250,"../util/preconditions":251,"buffer":47,"lodash":277}],235:[function(require,module,exports){
 module.exports = require('./transaction');
 
 module.exports.Input = require('./input');
@@ -43448,7 +43448,7 @@ module.exports.MultiSigScriptHash = require('./multisigscripthash.js');
 },{"./input":237,"./multisig.js":238,"./multisigscripthash.js":239,"./publickey":240,"./publickeyhash":241}],237:[function(require,module,exports){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var $ = require('../../util/preconditions');
 var errors = require('../../errors');
 var BufferWriter = require('../../encoding/bufferwriter');
@@ -43643,10 +43643,10 @@ Input.prototype._estimateSize = function() {
 
 module.exports = Input;
 
-},{"../../encoding/bufferwriter":219,"../../errors":221,"../../script":232,"../../util/buffer":249,"../../util/js":250,"../../util/preconditions":251,"../output":242,"../sighash":243,"buffer":47,"l*o*d*a*s*h":277}],238:[function(require,module,exports){
+},{"../../encoding/bufferwriter":219,"../../errors":221,"../../script":232,"../../util/buffer":249,"../../util/js":250,"../../util/preconditions":251,"../output":242,"../sighash":243,"buffer":47,"lodash":277}],238:[function(require,module,exports){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var inherits = require('inherits');
 var Transaction = require('../transaction');
 var Input = require('./input');
@@ -43856,10 +43856,10 @@ MultiSigInput.prototype._estimateSize = function() {
 
 module.exports = MultiSigInput;
 
-},{"../../crypto/signature":215,"../../publickey":231,"../../script":232,"../../util/buffer":249,"../../util/preconditions":251,"../output":242,"../sighash":243,"../signature":244,"../transaction":245,"./input":237,"inherits":276,"l*o*d*a*s*h":277}],239:[function(require,module,exports){
+},{"../../crypto/signature":215,"../../publickey":231,"../../script":232,"../../util/buffer":249,"../../util/preconditions":251,"../output":242,"../sighash":243,"../signature":244,"../transaction":245,"./input":237,"inherits":276,"lodash":277}],239:[function(require,module,exports){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var inherits = require('inherits');
 var Input = require('./input');
 var Output = require('../output');
@@ -44024,7 +44024,7 @@ MultiSigScriptHashInput.prototype._estimateSize = function() {
 
 module.exports = MultiSigScriptHashInput;
 
-},{"../../crypto/signature":215,"../../publickey":231,"../../script":232,"../../util/buffer":249,"../../util/preconditions":251,"../output":242,"../sighash":243,"../signature":244,"./input":237,"inherits":276,"l*o*d*a*s*h":277}],240:[function(require,module,exports){
+},{"../../crypto/signature":215,"../../publickey":231,"../../script":232,"../../util/buffer":249,"../../util/preconditions":251,"../output":242,"../sighash":243,"../signature":244,"./input":237,"inherits":276,"lodash":277}],240:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -44215,7 +44215,7 @@ module.exports = PublicKeyHashInput;
 },{"../../crypto/hash":212,"../../crypto/signature":215,"../../script":232,"../../util/buffer":249,"../../util/preconditions":251,"../output":242,"../sighash":243,"../signature":244,"./input":237,"inherits":276}],242:[function(require,module,exports){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var BN = require('../crypto/bn');
 var buffer = require('buffer');
 var bufferUtil = require('../util/buffer');
@@ -44382,7 +44382,7 @@ Output.prototype.toBufferWriter = function(writer) {
 
 module.exports = Output;
 
-},{"../crypto/bn":210,"../encoding/bufferwriter":219,"../errors":221,"../script":232,"../util/buffer":249,"../util/js":250,"../util/preconditions":251,"buffer":47,"l*o*d*a*s*h":277}],243:[function(require,module,exports){
+},{"../crypto/bn":210,"../encoding/bufferwriter":219,"../errors":221,"../script":232,"../util/buffer":249,"../util/js":250,"../util/preconditions":251,"buffer":47,"lodash":277}],243:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -44397,7 +44397,7 @@ var BN = require('../crypto/bn');
 var Hash = require('../crypto/hash');
 var ECDSA = require('../crypto/ecdsa');
 var $ = require('../util/preconditions');
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 
 var SIGHASH_SINGLE_BUG = '0000000000000000000000000000000000000000000000000000000000000001';
 var BITS_64_ON = 'ffffffffffffffff';
@@ -44522,11 +44522,11 @@ module.exports = {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/bn":210,"../crypto/ecdsa":211,"../crypto/hash":212,"../crypto/signature":215,"../encoding/bufferreader":218,"../encoding/bufferwriter":219,"../script":232,"../util/preconditions":251,"./input":236,"./output":242,"./transaction":245,"buffer":47,"l*o*d*a*s*h":277}],244:[function(require,module,exports){
+},{"../crypto/bn":210,"../crypto/ecdsa":211,"../crypto/hash":212,"../crypto/signature":215,"../encoding/bufferreader":218,"../encoding/bufferwriter":219,"../script":232,"../util/preconditions":251,"./input":236,"./output":242,"./transaction":245,"buffer":47,"lodash":277}],244:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 var inherits = require('inherits');
 var BufferUtil = require('../util/buffer');
@@ -44615,11 +44615,11 @@ TransactionSignature.fromObject = function(object) {
 module.exports = TransactionSignature;
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/signature":215,"../errors":221,"../publickey":231,"../util/buffer":249,"../util/js":250,"../util/preconditions":251,"buffer":47,"inherits":276,"l*o*d*a*s*h":277}],245:[function(require,module,exports){
+},{"../crypto/signature":215,"../errors":221,"../publickey":231,"../util/buffer":249,"../util/js":250,"../util/preconditions":251,"buffer":47,"inherits":276,"lodash":277}],245:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 var buffer = require('buffer');
 var compare = Buffer.compare || require('buffer-compare');
@@ -45586,7 +45586,7 @@ Transaction.prototype.sort = function() {
 
 /**
  * Randomize this transaction's outputs ordering. The shuffling algorithm is a
- * version of the Fisher-Yates shuffle, provided by l*o*d*a*s*h's _.shuffle().
+ * version of the Fisher-Yates shuffle, provided by lodash's _.shuffle().
  *
  * @return {Transaction} this
  */
@@ -45849,10 +45849,10 @@ Transaction.prototype.enableRBF = function() {
 module.exports = Transaction;
 
 }).call(this,require("buffer").Buffer)
-},{"../address":205,"../crypto/bn":210,"../crypto/hash":212,"../crypto/signature":215,"../encoding/bufferreader":218,"../encoding/bufferwriter":219,"../errors":221,"../privatekey":230,"../script":232,"../util/buffer":249,"../util/js":250,"../util/preconditions":251,"./input":236,"./output":242,"./sighash":243,"./unspentoutput":246,"buffer":47,"buffer-compare":254,"l*o*d*a*s*h":277}],246:[function(require,module,exports){
+},{"../address":205,"../crypto/bn":210,"../crypto/hash":212,"../crypto/signature":215,"../encoding/bufferreader":218,"../encoding/bufferwriter":219,"../errors":221,"../privatekey":230,"../script":232,"../util/buffer":249,"../util/js":250,"../util/preconditions":251,"./input":236,"./output":242,"./sighash":243,"./unspentoutput":246,"buffer":47,"buffer-compare":254,"lodash":277}],246:[function(require,module,exports){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 var JSUtil = require('../util/js');
 
@@ -45951,10 +45951,10 @@ UnspentOutput.prototype.toObject = UnspentOutput.prototype.toJSON = function toO
 
 module.exports = UnspentOutput;
 
-},{"../address":205,"../script":232,"../unit":247,"../util/js":250,"../util/preconditions":251,"l*o*d*a*s*h":277}],247:[function(require,module,exports){
+},{"../address":205,"../script":232,"../unit":247,"../util/js":250,"../util/preconditions":251,"lodash":277}],247:[function(require,module,exports){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 
 var errors = require('./errors');
 var $ = require('./util/preconditions');
@@ -46191,10 +46191,10 @@ Unit.prototype.inspect = function() {
 
 module.exports = Unit;
 
-},{"./errors":221,"./util/preconditions":251,"l*o*d*a*s*h":277}],248:[function(require,module,exports){
+},{"./errors":221,"./util/preconditions":251,"lodash":277}],248:[function(require,module,exports){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 var URL = require('url');
 
 var Address = require('./address');
@@ -46416,7 +46416,7 @@ URI.prototype.inspect = function() {
 
 module.exports = URI;
 
-},{"./address":205,"./unit":247,"l*o*d*a*s*h":277,"url":162}],249:[function(require,module,exports){
+},{"./address":205,"./unit":247,"lodash":277,"url":162}],249:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -46600,7 +46600,7 @@ module.exports.EMPTY_BUFFER = new Buffer(0);
 },{"./js":250,"./preconditions":251,"assert":16,"buffer":47}],250:[function(require,module,exports){
 'use strict';
 
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 
 /**
  * Determines whether a string contains only hexadecimal values
@@ -46683,11 +46683,11 @@ module.exports = {
   }
 };
 
-},{"l*o*d*a*s*h":277}],251:[function(require,module,exports){
+},{"lodash":277}],251:[function(require,module,exports){
 'use strict';
 
 var errors = require('../errors');
-var _ = require('l*o*d*a*s*h');
+var _ = require('lodash');
 
 module.exports = {
   checkState: function(condition, message) {
@@ -46719,7 +46719,7 @@ module.exports = {
   }
 };
 
-},{"../errors":221,"buffer":47,"l*o*d*a*s*h":277}],252:[function(require,module,exports){
+},{"../errors":221,"buffer":47,"lodash":277}],252:[function(require,module,exports){
 (function (module, exports) {
 
 'use strict';
@@ -52955,12 +52955,12 @@ arguments[4][103][0].apply(exports,arguments)
 (function (global){
 /**
  * @license
- * l*o*d*a*s*h 3.10.1 (Custom Build) <https://l*o*d*a*s*h.com/>
- * Build: `l*o*d*a*s*h modern -d -o ./index.js`
+ * lodash 3.10.1 (Custom Build) <https://lodash.com/>
+ * Build: `lodash modern -d -o ./index.js`
  * Copyright 2012-2015 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
- * Available under MIT license <https://l*o*d*a*s*h.com/license>
+ * Available under MIT license <https://lodash.com/license>
  */
 ;(function() {
 
@@ -53000,7 +53000,7 @@ arguments[4][103][0].apply(exports,arguments)
   var FUNC_ERROR_TEXT = 'Expected a function';
 
   /** Used as the internal argument placeholder. */
-  var PLACEHOLDER = '__l*o*d*a*s*h_placeholder__';
+  var PLACEHOLDER = '__lodash_placeholder__';
 
   /** `Object#toString` result references. */
   var argsTag = '[object Arguments]',
@@ -53616,28 +53616,28 @@ arguments[4][103][0].apply(exports,arguments)
   /*--------------------------------------------------------------------------*/
 
   /**
-   * Create a new pristine `l*o*d*a*s*h` function using the given `context` object.
+   * Create a new pristine `lodash` function using the given `context` object.
    *
    * @static
    * @memberOf _
    * @category Utility
    * @param {Object} [context=root] The context object.
-   * @returns {Function} Returns a new `l*o*d*a*s*h` function.
+   * @returns {Function} Returns a new `lodash` function.
    * @example
    *
    * _.mixin({ 'foo': _.constant('foo') });
    *
-   * var l*o*d*a*s*h = _.runInContext();
-   * l*o*d*a*s*h.mixin({ 'bar': l*o*d*a*s*h.constant('bar') });
+   * var lodash = _.runInContext();
+   * lodash.mixin({ 'bar': lodash.constant('bar') });
    *
    * _.isFunction(_.foo);
    * // => true
    * _.isFunction(_.bar);
    * // => false
    *
-   * l*o*d*a*s*h.isFunction(l*o*d*a*s*h.foo);
+   * lodash.isFunction(lodash.foo);
    * // => false
-   * l*o*d*a*s*h.isFunction(l*o*d*a*s*h.bar);
+   * lodash.isFunction(lodash.bar);
    * // => true
    *
    * // using `context` to mock `Date#getTime` use in `_.now`
@@ -53710,7 +53710,7 @@ arguments[4][103][0].apply(exports,arguments)
         Uint8Array = context.Uint8Array,
         WeakMap = getNative(context, 'WeakMap');
 
-    /* Native method references for those with the same name as other `l*o*d*a*s*h` methods. */
+    /* Native method references for those with the same name as other `lodash` methods. */
     var nativeCeil = Math.ceil,
         nativeCreate = getNative(Object, 'create'),
         nativeFloor = Math.floor,
@@ -53747,7 +53747,7 @@ arguments[4][103][0].apply(exports,arguments)
     /*------------------------------------------------------------------------*/
 
     /**
-     * Creates a `l*o*d*a*s*h` object which wraps `value` to enable implicit chaining.
+     * Creates a `lodash` object which wraps `value` to enable implicit chaining.
      * Methods that operate on and return arrays, collections, and functions can
      * be chained together. Methods that retrieve a single value or may return a
      * primitive value will automatically end the chain returning the unwrapped
@@ -53763,7 +53763,7 @@ arguments[4][103][0].apply(exports,arguments)
      * Chaining is supported in custom builds as long as the `_#value` method is
      * directly or indirectly included in the build.
      *
-     * In addition to l*o*d*a*s*h methods, wrappers have `Array` and `String` methods.
+     * In addition to lodash methods, wrappers have `Array` and `String` methods.
      *
      * The wrapper `Array` methods are:
      * `concat`, `join`, `pop`, `push`, `reverse`, `shift`, `slice`, `sort`,
@@ -53819,8 +53819,8 @@ arguments[4][103][0].apply(exports,arguments)
      * @name _
      * @constructor
      * @category Chain
-     * @param {*} value The value to wrap in a `l*o*d*a*s*h` instance.
-     * @returns {Object} Returns the new `l*o*d*a*s*h` wrapper instance.
+     * @param {*} value The value to wrap in a `lodash` instance.
+     * @returns {Object} Returns the new `lodash` wrapper instance.
      * @example
      *
      * var wrapped = _([1, 2, 3]);
@@ -53842,16 +53842,16 @@ arguments[4][103][0].apply(exports,arguments)
      * _.isArray(squares.value());
      * // => true
      */
-    function l*o*d*a*s*h(value) {
+    function lodash(value) {
       if (isObjectLike(value) && !isArray(value) && !(value instanceof LazyWrapper)) {
-        if (value instanceof L*o*d*a*s*hWrapper) {
+        if (value instanceof LodashWrapper) {
           return value;
         }
         if (hasOwnProperty.call(value, '__chain__') && hasOwnProperty.call(value, '__wrapped__')) {
           return wrapperClone(value);
         }
       }
-      return new L*o*d*a*s*hWrapper(value);
+      return new LodashWrapper(value);
     }
 
     /**
@@ -53859,19 +53859,19 @@ arguments[4][103][0].apply(exports,arguments)
      *
      * @private
      */
-    function baseL*o*d*a*s*h() {
+    function baseLodash() {
       // No operation performed.
     }
 
     /**
-     * The base constructor for creating `l*o*d*a*s*h` wrapper objects.
+     * The base constructor for creating `lodash` wrapper objects.
      *
      * @private
      * @param {*} value The value to wrap.
      * @param {boolean} [chainAll] Enable chaining for all wrapper methods.
      * @param {Array} [actions=[]] Actions to peform to resolve the unwrapped value.
      */
-    function L*o*d*a*s*hWrapper(value, chainAll, actions) {
+    function LodashWrapper(value, chainAll, actions) {
       this.__wrapped__ = value;
       this.__actions__ = actions || [];
       this.__chain__ = !!chainAll;
@@ -53884,10 +53884,10 @@ arguments[4][103][0].apply(exports,arguments)
      * @memberOf _
      * @type Object
      */
-    var support = l*o*d*a*s*h.support = {};
+    var support = lodash.support = {};
 
     /**
-     * By default, the template delimiters used by l*o*d*a*s*h are like those in
+     * By default, the template delimiters used by lodash are like those in
      * embedded Ruby (ERB). Change the following template settings to use
      * alternative delimiters.
      *
@@ -53895,7 +53895,7 @@ arguments[4][103][0].apply(exports,arguments)
      * @memberOf _
      * @type Object
      */
-    l*o*d*a*s*h.templateSettings = {
+    lodash.templateSettings = {
 
       /**
        * Used to detect `data` property values to be HTML-escaped.
@@ -53938,12 +53938,12 @@ arguments[4][103][0].apply(exports,arguments)
       'imports': {
 
         /**
-         * A reference to the `l*o*d*a*s*h` function.
+         * A reference to the `lodash` function.
          *
          * @memberOf _.templateSettings.imports
          * @type Function
          */
-        '_': l*o*d*a*s*h
+        '_': lodash
       }
     };
 
@@ -56251,8 +56251,8 @@ arguments[4][103][0].apply(exports,arguments)
           if (typeof func != 'function') {
             throw new TypeError(FUNC_ERROR_TEXT);
           }
-          if (!wrapper && L*o*d*a*s*hWrapper.prototype.thru && getFuncName(func) == 'wrapper') {
-            wrapper = new L*o*d*a*s*hWrapper([], true);
+          if (!wrapper && LodashWrapper.prototype.thru && getFuncName(func) == 'wrapper') {
+            wrapper = new LodashWrapper([], true);
           }
         }
         index = wrapper ? -1 : length;
@@ -56804,7 +56804,7 @@ arguments[4][103][0].apply(exports,arguments)
      * @returns {Function} Returns the chosen function or its result.
      */
     function getCallback(func, thisArg, argCount) {
-      var result = l*o*d*a*s*h.callback || callback;
+      var result = lodash.callback || callback;
       result = result === callback ? baseCallback : result;
       return argCount ? result(func, thisArg, argCount) : result;
     }
@@ -56852,7 +56852,7 @@ arguments[4][103][0].apply(exports,arguments)
      * @returns {Function|number} Returns the chosen function or its result.
      */
     function getIndexOf(collection, target, fromIndex) {
-      var result = l*o*d*a*s*h.indexOf || indexOf;
+      var result = lodash.indexOf || indexOf;
       result = result === indexOf ? baseIndexOf : result;
       return collection ? result(collection, target, fromIndex) : result;
     }
@@ -57099,7 +57099,7 @@ arguments[4][103][0].apply(exports,arguments)
       if (!(funcName in LazyWrapper.prototype)) {
         return false;
       }
-      var other = l*o*d*a*s*h[funcName];
+      var other = lodash[funcName];
       if (func === other) {
         return true;
       }
@@ -57397,7 +57397,7 @@ arguments[4][103][0].apply(exports,arguments)
     function wrapperClone(wrapper) {
       return wrapper instanceof LazyWrapper
         ? wrapper.clone()
-        : new L*o*d*a*s*hWrapper(wrapper.__wrapped__, wrapper.__chain__, arrayCopy(wrapper.__actions__));
+        : new LodashWrapper(wrapper.__wrapped__, wrapper.__chain__, arrayCopy(wrapper.__actions__));
     }
 
     /*------------------------------------------------------------------------*/
@@ -58798,14 +58798,14 @@ arguments[4][103][0].apply(exports,arguments)
     /*------------------------------------------------------------------------*/
 
     /**
-     * Creates a `l*o*d*a*s*h` object that wraps `value` with explicit method
+     * Creates a `lodash` object that wraps `value` with explicit method
      * chaining enabled.
      *
      * @static
      * @memberOf _
      * @category Chain
      * @param {*} value The value to wrap.
-     * @returns {Object} Returns the new `l*o*d*a*s*h` wrapper instance.
+     * @returns {Object} Returns the new `lodash` wrapper instance.
      * @example
      *
      * var users = [
@@ -58824,7 +58824,7 @@ arguments[4][103][0].apply(exports,arguments)
      * // => 'pebbles is 1'
      */
     function chain(value) {
-      var result = l*o*d*a*s*h(value);
+      var result = lodash(value);
       result.__chain__ = true;
       return result;
     }
@@ -58888,7 +58888,7 @@ arguments[4][103][0].apply(exports,arguments)
      * @name chain
      * @memberOf _
      * @category Chain
-     * @returns {Object} Returns the new `l*o*d*a*s*h` wrapper instance.
+     * @returns {Object} Returns the new `lodash` wrapper instance.
      * @example
      *
      * var users = [
@@ -58917,7 +58917,7 @@ arguments[4][103][0].apply(exports,arguments)
      * @name commit
      * @memberOf _
      * @category Chain
-     * @returns {Object} Returns the new `l*o*d*a*s*h` wrapper instance.
+     * @returns {Object} Returns the new `lodash` wrapper instance.
      * @example
      *
      * var array = [1, 2];
@@ -58937,7 +58937,7 @@ arguments[4][103][0].apply(exports,arguments)
      * // => [1, 2, 3]
      */
     function wrapperCommit() {
-      return new L*o*d*a*s*hWrapper(this.value(), this.__chain__);
+      return new LodashWrapper(this.value(), this.__chain__);
     }
 
     /**
@@ -58973,7 +58973,7 @@ arguments[4][103][0].apply(exports,arguments)
      * @name plant
      * @memberOf _
      * @category Chain
-     * @returns {Object} Returns the new `l*o*d*a*s*h` wrapper instance.
+     * @returns {Object} Returns the new `lodash` wrapper instance.
      * @example
      *
      * var array = [1, 2];
@@ -58994,7 +58994,7 @@ arguments[4][103][0].apply(exports,arguments)
       var result,
           parent = this;
 
-      while (parent instanceof baseL*o*d*a*s*h) {
+      while (parent instanceof baseLodash) {
         var clone = wrapperClone(parent);
         if (result) {
           previous.__wrapped__ = clone;
@@ -59017,7 +59017,7 @@ arguments[4][103][0].apply(exports,arguments)
      * @name reverse
      * @memberOf _
      * @category Chain
-     * @returns {Object} Returns the new reversed `l*o*d*a*s*h` wrapper instance.
+     * @returns {Object} Returns the new reversed `lodash` wrapper instance.
      * @example
      *
      * var array = [1, 2, 3];
@@ -59041,7 +59041,7 @@ arguments[4][103][0].apply(exports,arguments)
         }
         wrapped = wrapped.reverse();
         wrapped.__actions__.push({ 'func': thru, 'args': [interceptor], 'thisArg': undefined });
-        return new L*o*d*a*s*hWrapper(wrapped, this.__chain__);
+        return new LodashWrapper(wrapped, this.__chain__);
       }
       return this.thru(interceptor);
     }
@@ -59619,7 +59619,7 @@ arguments[4][103][0].apply(exports,arguments)
      * callback returns `true` for elements that have the properties of the given
      * object, else `false`.
      *
-     * Many l*o*d*a*s*h methods are guarded to work as iteratees for methods like
+     * Many lodash methods are guarded to work as iteratees for methods like
      * `_.every`, `_.filter`, `_.map`, `_.mapValues`, `_.reject`, and `_.some`.
      *
      * The guarded methods are:
@@ -59763,7 +59763,7 @@ arguments[4][103][0].apply(exports,arguments)
      * value. The `iteratee` is bound to `thisArg` and invoked with four arguments:
      * (accumulator, value, index|key, collection).
      *
-     * Many l*o*d*a*s*h methods are guarded to work as iteratees for methods like
+     * Many lodash methods are guarded to work as iteratees for methods like
      * `_.reduce`, `_.reduceRight`, and `_.transform`.
      *
      * The guarded methods are:
@@ -63300,8 +63300,8 @@ arguments[4][103][0].apply(exports,arguments)
      * @returns {string} Returns the escaped string.
      * @example
      *
-     * _.escapeRegExp('[l*o*d*a*s*h](https://l*o*d*a*s*h.com/)');
-     * // => '\[l*o*d*a*s*h\]\(https:\/\/l*o*d*a*s*h\.com\/\)'
+     * _.escapeRegExp('[lodash](https://lodash.com/)');
+     * // => '\[lodash\]\(https:\/\/lodash\.com\/\)'
      */
     function escapeRegExp(string) {
       string = baseToString(string);
@@ -63583,7 +63583,7 @@ arguments[4][103][0].apply(exports,arguments)
      * for easier debugging.
      *
      * For more information on precompiling templates see
-     * [l*o*d*a*s*h's custom builds documentation](https://l*o*d*a*s*h.com/custom-builds).
+     * [lodash's custom builds documentation](https://lodash.com/custom-builds).
      *
      * For more information on Chrome extension sandboxes see
      * [Chrome's extensions documentation](https://developer.chrome.com/extensions/sandboxingEval).
@@ -63670,7 +63670,7 @@ arguments[4][103][0].apply(exports,arguments)
     function template(string, options, otherOptions) {
       // Based on John Resig's `tmpl` implementation (http://ejohn.org/blog/javascript-micro-templating/)
       // and Laura Doktorova's doT.js (https://github.com/olado/doT).
-      var settings = l*o*d*a*s*h.templateSettings;
+      var settings = lodash.templateSettings;
 
       if (otherOptions && isIterateeCall(string, options, otherOptions)) {
         options = otherOptions = undefined;
@@ -63700,7 +63700,7 @@ arguments[4][103][0].apply(exports,arguments)
       var sourceURL = '//# sourceURL=' +
         ('sourceURL' in options
           ? options.sourceURL
-          : ('l*o*d*a*s*h.templateSources[' + (++templateCounter) + ']')
+          : ('lodash.templateSources[' + (++templateCounter) + ']')
         ) + '\n';
 
       string.replace(reDelimiters, function(match, escapeValue, interpolateValue, esTemplateValue, evaluateValue, offset) {
@@ -64247,13 +64247,13 @@ arguments[4][103][0].apply(exports,arguments)
      * destination object. If `object` is a function then methods are added to
      * its prototype as well.
      *
-     * **Note:** Use `_.runInContext` to create a pristine `l*o*d*a*s*h` function to
+     * **Note:** Use `_.runInContext` to create a pristine `lodash` function to
      * avoid conflicts caused by modifying the original.
      *
      * @static
      * @memberOf _
      * @category Utility
-     * @param {Function|Object} [object=l*o*d*a*s*h] The destination object.
+     * @param {Function|Object} [object=lodash] The destination object.
      * @param {Object} source The object of functions to add.
      * @param {Object} [options] The options object.
      * @param {boolean} [options.chain=true] Specify whether the functions added
@@ -64331,15 +64331,15 @@ arguments[4][103][0].apply(exports,arguments)
 
     /**
      * Reverts the `_` variable to its previous value and returns a reference to
-     * the `l*o*d*a*s*h` function.
+     * the `lodash` function.
      *
      * @static
      * @memberOf _
      * @category Utility
-     * @returns {Function} Returns the `l*o*d*a*s*h` function.
+     * @returns {Function} Returns the `lodash` function.
      * @example
      *
-     * var l*o*d*a*s*h = _.noConflict();
+     * var lodash = _.noConflict();
      */
     function noConflict() {
       root._ = oldSquare;
@@ -64773,13 +64773,13 @@ arguments[4][103][0].apply(exports,arguments)
 
     /*------------------------------------------------------------------------*/
 
-    // Ensure wrappers are instances of `baseL*o*d*a*s*h`.
-    l*o*d*a*s*h.prototype = baseL*o*d*a*s*h.prototype;
+    // Ensure wrappers are instances of `baseLodash`.
+    lodash.prototype = baseLodash.prototype;
 
-    L*o*d*a*s*hWrapper.prototype = baseCreate(baseL*o*d*a*s*h.prototype);
-    L*o*d*a*s*hWrapper.prototype.constructor = L*o*d*a*s*hWrapper;
+    LodashWrapper.prototype = baseCreate(baseLodash.prototype);
+    LodashWrapper.prototype.constructor = LodashWrapper;
 
-    LazyWrapper.prototype = baseCreate(baseL*o*d*a*s*h.prototype);
+    LazyWrapper.prototype = baseCreate(baseLodash.prototype);
     LazyWrapper.prototype.constructor = LazyWrapper;
 
     // Add functions to the `Map` cache.
@@ -64795,240 +64795,240 @@ arguments[4][103][0].apply(exports,arguments)
     memoize.Cache = MapCache;
 
     // Add functions that return wrapped values when chaining.
-    l*o*d*a*s*h.after = after;
-    l*o*d*a*s*h.ary = ary;
-    l*o*d*a*s*h.assign = assign;
-    l*o*d*a*s*h.at = at;
-    l*o*d*a*s*h.before = before;
-    l*o*d*a*s*h.bind = bind;
-    l*o*d*a*s*h.bindAll = bindAll;
-    l*o*d*a*s*h.bindKey = bindKey;
-    l*o*d*a*s*h.callback = callback;
-    l*o*d*a*s*h.chain = chain;
-    l*o*d*a*s*h.chunk = chunk;
-    l*o*d*a*s*h.compact = compact;
-    l*o*d*a*s*h.constant = constant;
-    l*o*d*a*s*h.countBy = countBy;
-    l*o*d*a*s*h.create = create;
-    l*o*d*a*s*h.curry = curry;
-    l*o*d*a*s*h.curryRight = curryRight;
-    l*o*d*a*s*h.debounce = debounce;
-    l*o*d*a*s*h.defaults = defaults;
-    l*o*d*a*s*h.defaultsDeep = defaultsDeep;
-    l*o*d*a*s*h.defer = defer;
-    l*o*d*a*s*h.delay = delay;
-    l*o*d*a*s*h.difference = difference;
-    l*o*d*a*s*h.drop = drop;
-    l*o*d*a*s*h.dropRight = dropRight;
-    l*o*d*a*s*h.dropRightWhile = dropRightWhile;
-    l*o*d*a*s*h.dropWhile = dropWhile;
-    l*o*d*a*s*h.fill = fill;
-    l*o*d*a*s*h.filter = filter;
-    l*o*d*a*s*h.flatten = flatten;
-    l*o*d*a*s*h.flattenDeep = flattenDeep;
-    l*o*d*a*s*h.flow = flow;
-    l*o*d*a*s*h.flowRight = flowRight;
-    l*o*d*a*s*h.forEach = forEach;
-    l*o*d*a*s*h.forEachRight = forEachRight;
-    l*o*d*a*s*h.forIn = forIn;
-    l*o*d*a*s*h.forInRight = forInRight;
-    l*o*d*a*s*h.forOwn = forOwn;
-    l*o*d*a*s*h.forOwnRight = forOwnRight;
-    l*o*d*a*s*h.functions = functions;
-    l*o*d*a*s*h.groupBy = groupBy;
-    l*o*d*a*s*h.indexBy = indexBy;
-    l*o*d*a*s*h.initial = initial;
-    l*o*d*a*s*h.intersection = intersection;
-    l*o*d*a*s*h.invert = invert;
-    l*o*d*a*s*h.invoke = invoke;
-    l*o*d*a*s*h.keys = keys;
-    l*o*d*a*s*h.keysIn = keysIn;
-    l*o*d*a*s*h.map = map;
-    l*o*d*a*s*h.mapKeys = mapKeys;
-    l*o*d*a*s*h.mapValues = mapValues;
-    l*o*d*a*s*h.matches = matches;
-    l*o*d*a*s*h.matchesProperty = matchesProperty;
-    l*o*d*a*s*h.memoize = memoize;
-    l*o*d*a*s*h.merge = merge;
-    l*o*d*a*s*h.method = method;
-    l*o*d*a*s*h.methodOf = methodOf;
-    l*o*d*a*s*h.mixin = mixin;
-    l*o*d*a*s*h.modArgs = modArgs;
-    l*o*d*a*s*h.negate = negate;
-    l*o*d*a*s*h.omit = omit;
-    l*o*d*a*s*h.once = once;
-    l*o*d*a*s*h.pairs = pairs;
-    l*o*d*a*s*h.partial = partial;
-    l*o*d*a*s*h.partialRight = partialRight;
-    l*o*d*a*s*h.partition = partition;
-    l*o*d*a*s*h.pick = pick;
-    l*o*d*a*s*h.pluck = pluck;
-    l*o*d*a*s*h.property = property;
-    l*o*d*a*s*h.propertyOf = propertyOf;
-    l*o*d*a*s*h.pull = pull;
-    l*o*d*a*s*h.pullAt = pullAt;
-    l*o*d*a*s*h.range = range;
-    l*o*d*a*s*h.rearg = rearg;
-    l*o*d*a*s*h.reject = reject;
-    l*o*d*a*s*h.remove = remove;
-    l*o*d*a*s*h.rest = rest;
-    l*o*d*a*s*h.restParam = restParam;
-    l*o*d*a*s*h.set = set;
-    l*o*d*a*s*h.shuffle = shuffle;
-    l*o*d*a*s*h.slice = slice;
-    l*o*d*a*s*h.sortBy = sortBy;
-    l*o*d*a*s*h.sortByAll = sortByAll;
-    l*o*d*a*s*h.sortByOrder = sortByOrder;
-    l*o*d*a*s*h.spread = spread;
-    l*o*d*a*s*h.take = take;
-    l*o*d*a*s*h.takeRight = takeRight;
-    l*o*d*a*s*h.takeRightWhile = takeRightWhile;
-    l*o*d*a*s*h.takeWhile = takeWhile;
-    l*o*d*a*s*h.tap = tap;
-    l*o*d*a*s*h.throttle = throttle;
-    l*o*d*a*s*h.thru = thru;
-    l*o*d*a*s*h.times = times;
-    l*o*d*a*s*h.toArray = toArray;
-    l*o*d*a*s*h.toPlainObject = toPlainObject;
-    l*o*d*a*s*h.transform = transform;
-    l*o*d*a*s*h.union = union;
-    l*o*d*a*s*h.uniq = uniq;
-    l*o*d*a*s*h.unzip = unzip;
-    l*o*d*a*s*h.unzipWith = unzipWith;
-    l*o*d*a*s*h.values = values;
-    l*o*d*a*s*h.valuesIn = valuesIn;
-    l*o*d*a*s*h.where = where;
-    l*o*d*a*s*h.without = without;
-    l*o*d*a*s*h.wrap = wrap;
-    l*o*d*a*s*h.xor = xor;
-    l*o*d*a*s*h.zip = zip;
-    l*o*d*a*s*h.zipObject = zipObject;
-    l*o*d*a*s*h.zipWith = zipWith;
+    lodash.after = after;
+    lodash.ary = ary;
+    lodash.assign = assign;
+    lodash.at = at;
+    lodash.before = before;
+    lodash.bind = bind;
+    lodash.bindAll = bindAll;
+    lodash.bindKey = bindKey;
+    lodash.callback = callback;
+    lodash.chain = chain;
+    lodash.chunk = chunk;
+    lodash.compact = compact;
+    lodash.constant = constant;
+    lodash.countBy = countBy;
+    lodash.create = create;
+    lodash.curry = curry;
+    lodash.curryRight = curryRight;
+    lodash.debounce = debounce;
+    lodash.defaults = defaults;
+    lodash.defaultsDeep = defaultsDeep;
+    lodash.defer = defer;
+    lodash.delay = delay;
+    lodash.difference = difference;
+    lodash.drop = drop;
+    lodash.dropRight = dropRight;
+    lodash.dropRightWhile = dropRightWhile;
+    lodash.dropWhile = dropWhile;
+    lodash.fill = fill;
+    lodash.filter = filter;
+    lodash.flatten = flatten;
+    lodash.flattenDeep = flattenDeep;
+    lodash.flow = flow;
+    lodash.flowRight = flowRight;
+    lodash.forEach = forEach;
+    lodash.forEachRight = forEachRight;
+    lodash.forIn = forIn;
+    lodash.forInRight = forInRight;
+    lodash.forOwn = forOwn;
+    lodash.forOwnRight = forOwnRight;
+    lodash.functions = functions;
+    lodash.groupBy = groupBy;
+    lodash.indexBy = indexBy;
+    lodash.initial = initial;
+    lodash.intersection = intersection;
+    lodash.invert = invert;
+    lodash.invoke = invoke;
+    lodash.keys = keys;
+    lodash.keysIn = keysIn;
+    lodash.map = map;
+    lodash.mapKeys = mapKeys;
+    lodash.mapValues = mapValues;
+    lodash.matches = matches;
+    lodash.matchesProperty = matchesProperty;
+    lodash.memoize = memoize;
+    lodash.merge = merge;
+    lodash.method = method;
+    lodash.methodOf = methodOf;
+    lodash.mixin = mixin;
+    lodash.modArgs = modArgs;
+    lodash.negate = negate;
+    lodash.omit = omit;
+    lodash.once = once;
+    lodash.pairs = pairs;
+    lodash.partial = partial;
+    lodash.partialRight = partialRight;
+    lodash.partition = partition;
+    lodash.pick = pick;
+    lodash.pluck = pluck;
+    lodash.property = property;
+    lodash.propertyOf = propertyOf;
+    lodash.pull = pull;
+    lodash.pullAt = pullAt;
+    lodash.range = range;
+    lodash.rearg = rearg;
+    lodash.reject = reject;
+    lodash.remove = remove;
+    lodash.rest = rest;
+    lodash.restParam = restParam;
+    lodash.set = set;
+    lodash.shuffle = shuffle;
+    lodash.slice = slice;
+    lodash.sortBy = sortBy;
+    lodash.sortByAll = sortByAll;
+    lodash.sortByOrder = sortByOrder;
+    lodash.spread = spread;
+    lodash.take = take;
+    lodash.takeRight = takeRight;
+    lodash.takeRightWhile = takeRightWhile;
+    lodash.takeWhile = takeWhile;
+    lodash.tap = tap;
+    lodash.throttle = throttle;
+    lodash.thru = thru;
+    lodash.times = times;
+    lodash.toArray = toArray;
+    lodash.toPlainObject = toPlainObject;
+    lodash.transform = transform;
+    lodash.union = union;
+    lodash.uniq = uniq;
+    lodash.unzip = unzip;
+    lodash.unzipWith = unzipWith;
+    lodash.values = values;
+    lodash.valuesIn = valuesIn;
+    lodash.where = where;
+    lodash.without = without;
+    lodash.wrap = wrap;
+    lodash.xor = xor;
+    lodash.zip = zip;
+    lodash.zipObject = zipObject;
+    lodash.zipWith = zipWith;
 
     // Add aliases.
-    l*o*d*a*s*h.backflow = flowRight;
-    l*o*d*a*s*h.collect = map;
-    l*o*d*a*s*h.compose = flowRight;
-    l*o*d*a*s*h.each = forEach;
-    l*o*d*a*s*h.eachRight = forEachRight;
-    l*o*d*a*s*h.extend = assign;
-    l*o*d*a*s*h.iteratee = callback;
-    l*o*d*a*s*h.methods = functions;
-    l*o*d*a*s*h.object = zipObject;
-    l*o*d*a*s*h.select = filter;
-    l*o*d*a*s*h.tail = rest;
-    l*o*d*a*s*h.unique = uniq;
+    lodash.backflow = flowRight;
+    lodash.collect = map;
+    lodash.compose = flowRight;
+    lodash.each = forEach;
+    lodash.eachRight = forEachRight;
+    lodash.extend = assign;
+    lodash.iteratee = callback;
+    lodash.methods = functions;
+    lodash.object = zipObject;
+    lodash.select = filter;
+    lodash.tail = rest;
+    lodash.unique = uniq;
 
-    // Add functions to `l*o*d*a*s*h.prototype`.
-    mixin(l*o*d*a*s*h, l*o*d*a*s*h);
+    // Add functions to `lodash.prototype`.
+    mixin(lodash, lodash);
 
     /*------------------------------------------------------------------------*/
 
     // Add functions that return unwrapped values when chaining.
-    l*o*d*a*s*h.add = add;
-    l*o*d*a*s*h.attempt = attempt;
-    l*o*d*a*s*h.camelCase = camelCase;
-    l*o*d*a*s*h.capitalize = capitalize;
-    l*o*d*a*s*h.ceil = ceil;
-    l*o*d*a*s*h.clone = clone;
-    l*o*d*a*s*h.cloneDeep = cloneDeep;
-    l*o*d*a*s*h.deburr = deburr;
-    l*o*d*a*s*h.endsWith = endsWith;
-    l*o*d*a*s*h.escape = escape;
-    l*o*d*a*s*h.escapeRegExp = escapeRegExp;
-    l*o*d*a*s*h.every = every;
-    l*o*d*a*s*h.find = find;
-    l*o*d*a*s*h.findIndex = findIndex;
-    l*o*d*a*s*h.findKey = findKey;
-    l*o*d*a*s*h.findLast = findLast;
-    l*o*d*a*s*h.findLastIndex = findLastIndex;
-    l*o*d*a*s*h.findLastKey = findLastKey;
-    l*o*d*a*s*h.findWhere = findWhere;
-    l*o*d*a*s*h.first = first;
-    l*o*d*a*s*h.floor = floor;
-    l*o*d*a*s*h.get = get;
-    l*o*d*a*s*h.gt = gt;
-    l*o*d*a*s*h.gte = gte;
-    l*o*d*a*s*h.has = has;
-    l*o*d*a*s*h.identity = identity;
-    l*o*d*a*s*h.includes = includes;
-    l*o*d*a*s*h.indexOf = indexOf;
-    l*o*d*a*s*h.inRange = inRange;
-    l*o*d*a*s*h.isArguments = isArguments;
-    l*o*d*a*s*h.isArray = isArray;
-    l*o*d*a*s*h.isBoolean = isBoolean;
-    l*o*d*a*s*h.isDate = isDate;
-    l*o*d*a*s*h.isElement = isElement;
-    l*o*d*a*s*h.isEmpty = isEmpty;
-    l*o*d*a*s*h.isEqual = isEqual;
-    l*o*d*a*s*h.isError = isError;
-    l*o*d*a*s*h.isFinite = isFinite;
-    l*o*d*a*s*h.isFunction = isFunction;
-    l*o*d*a*s*h.isMatch = isMatch;
-    l*o*d*a*s*h.isNaN = isNaN;
-    l*o*d*a*s*h.isNative = isNative;
-    l*o*d*a*s*h.isNull = isNull;
-    l*o*d*a*s*h.isNumber = isNumber;
-    l*o*d*a*s*h.isObject = isObject;
-    l*o*d*a*s*h.isPlainObject = isPlainObject;
-    l*o*d*a*s*h.isRegExp = isRegExp;
-    l*o*d*a*s*h.isString = isString;
-    l*o*d*a*s*h.isTypedArray = isTypedArray;
-    l*o*d*a*s*h.isUndefined = isUndefined;
-    l*o*d*a*s*h.kebabCase = kebabCase;
-    l*o*d*a*s*h.last = last;
-    l*o*d*a*s*h.lastIndexOf = lastIndexOf;
-    l*o*d*a*s*h.lt = lt;
-    l*o*d*a*s*h.lte = lte;
-    l*o*d*a*s*h.max = max;
-    l*o*d*a*s*h.min = min;
-    l*o*d*a*s*h.noConflict = noConflict;
-    l*o*d*a*s*h.noop = noop;
-    l*o*d*a*s*h.now = now;
-    l*o*d*a*s*h.pad = pad;
-    l*o*d*a*s*h.padLeft = padLeft;
-    l*o*d*a*s*h.padRight = padRight;
-    l*o*d*a*s*h.parseInt = parseInt;
-    l*o*d*a*s*h.random = random;
-    l*o*d*a*s*h.reduce = reduce;
-    l*o*d*a*s*h.reduceRight = reduceRight;
-    l*o*d*a*s*h.repeat = repeat;
-    l*o*d*a*s*h.result = result;
-    l*o*d*a*s*h.round = round;
-    l*o*d*a*s*h.runInContext = runInContext;
-    l*o*d*a*s*h.size = size;
-    l*o*d*a*s*h.snakeCase = snakeCase;
-    l*o*d*a*s*h.some = some;
-    l*o*d*a*s*h.sortedIndex = sortedIndex;
-    l*o*d*a*s*h.sortedLastIndex = sortedLastIndex;
-    l*o*d*a*s*h.startCase = startCase;
-    l*o*d*a*s*h.startsWith = startsWith;
-    l*o*d*a*s*h.sum = sum;
-    l*o*d*a*s*h.template = template;
-    l*o*d*a*s*h.trim = trim;
-    l*o*d*a*s*h.trimLeft = trimLeft;
-    l*o*d*a*s*h.trimRight = trimRight;
-    l*o*d*a*s*h.trunc = trunc;
-    l*o*d*a*s*h.unescape = unescape;
-    l*o*d*a*s*h.uniqueId = uniqueId;
-    l*o*d*a*s*h.words = words;
+    lodash.add = add;
+    lodash.attempt = attempt;
+    lodash.camelCase = camelCase;
+    lodash.capitalize = capitalize;
+    lodash.ceil = ceil;
+    lodash.clone = clone;
+    lodash.cloneDeep = cloneDeep;
+    lodash.deburr = deburr;
+    lodash.endsWith = endsWith;
+    lodash.escape = escape;
+    lodash.escapeRegExp = escapeRegExp;
+    lodash.every = every;
+    lodash.find = find;
+    lodash.findIndex = findIndex;
+    lodash.findKey = findKey;
+    lodash.findLast = findLast;
+    lodash.findLastIndex = findLastIndex;
+    lodash.findLastKey = findLastKey;
+    lodash.findWhere = findWhere;
+    lodash.first = first;
+    lodash.floor = floor;
+    lodash.get = get;
+    lodash.gt = gt;
+    lodash.gte = gte;
+    lodash.has = has;
+    lodash.identity = identity;
+    lodash.includes = includes;
+    lodash.indexOf = indexOf;
+    lodash.inRange = inRange;
+    lodash.isArguments = isArguments;
+    lodash.isArray = isArray;
+    lodash.isBoolean = isBoolean;
+    lodash.isDate = isDate;
+    lodash.isElement = isElement;
+    lodash.isEmpty = isEmpty;
+    lodash.isEqual = isEqual;
+    lodash.isError = isError;
+    lodash.isFinite = isFinite;
+    lodash.isFunction = isFunction;
+    lodash.isMatch = isMatch;
+    lodash.isNaN = isNaN;
+    lodash.isNative = isNative;
+    lodash.isNull = isNull;
+    lodash.isNumber = isNumber;
+    lodash.isObject = isObject;
+    lodash.isPlainObject = isPlainObject;
+    lodash.isRegExp = isRegExp;
+    lodash.isString = isString;
+    lodash.isTypedArray = isTypedArray;
+    lodash.isUndefined = isUndefined;
+    lodash.kebabCase = kebabCase;
+    lodash.last = last;
+    lodash.lastIndexOf = lastIndexOf;
+    lodash.lt = lt;
+    lodash.lte = lte;
+    lodash.max = max;
+    lodash.min = min;
+    lodash.noConflict = noConflict;
+    lodash.noop = noop;
+    lodash.now = now;
+    lodash.pad = pad;
+    lodash.padLeft = padLeft;
+    lodash.padRight = padRight;
+    lodash.parseInt = parseInt;
+    lodash.random = random;
+    lodash.reduce = reduce;
+    lodash.reduceRight = reduceRight;
+    lodash.repeat = repeat;
+    lodash.result = result;
+    lodash.round = round;
+    lodash.runInContext = runInContext;
+    lodash.size = size;
+    lodash.snakeCase = snakeCase;
+    lodash.some = some;
+    lodash.sortedIndex = sortedIndex;
+    lodash.sortedLastIndex = sortedLastIndex;
+    lodash.startCase = startCase;
+    lodash.startsWith = startsWith;
+    lodash.sum = sum;
+    lodash.template = template;
+    lodash.trim = trim;
+    lodash.trimLeft = trimLeft;
+    lodash.trimRight = trimRight;
+    lodash.trunc = trunc;
+    lodash.unescape = unescape;
+    lodash.uniqueId = uniqueId;
+    lodash.words = words;
 
     // Add aliases.
-    l*o*d*a*s*h.all = every;
-    l*o*d*a*s*h.any = some;
-    l*o*d*a*s*h.contains = includes;
-    l*o*d*a*s*h.eq = isEqual;
-    l*o*d*a*s*h.detect = find;
-    l*o*d*a*s*h.foldl = reduce;
-    l*o*d*a*s*h.foldr = reduceRight;
-    l*o*d*a*s*h.head = first;
-    l*o*d*a*s*h.include = includes;
-    l*o*d*a*s*h.inject = reduce;
+    lodash.all = every;
+    lodash.any = some;
+    lodash.contains = includes;
+    lodash.eq = isEqual;
+    lodash.detect = find;
+    lodash.foldl = reduce;
+    lodash.foldr = reduceRight;
+    lodash.head = first;
+    lodash.include = includes;
+    lodash.inject = reduce;
 
-    mixin(l*o*d*a*s*h, (function() {
+    mixin(lodash, (function() {
       var source = {};
-      baseForOwn(l*o*d*a*s*h, function(func, methodName) {
-        if (!l*o*d*a*s*h.prototype[methodName]) {
+      baseForOwn(lodash, function(func, methodName) {
+        if (!lodash.prototype[methodName]) {
           source[methodName] = func;
         }
       });
@@ -65038,9 +65038,9 @@ arguments[4][103][0].apply(exports,arguments)
     /*------------------------------------------------------------------------*/
 
     // Add functions capable of returning wrapped and unwrapped values when chaining.
-    l*o*d*a*s*h.sample = sample;
+    lodash.sample = sample;
 
-    l*o*d*a*s*h.prototype.sample = function(n) {
+    lodash.prototype.sample = function(n) {
       if (!this.__chain__ && n == null) {
         return sample(this.value());
       }
@@ -65058,11 +65058,11 @@ arguments[4][103][0].apply(exports,arguments)
      * @memberOf _
      * @type string
      */
-    l*o*d*a*s*h.VERSION = VERSION;
+    lodash.VERSION = VERSION;
 
     // Assign default placeholders.
     arrayEach(['bind', 'bindKey', 'curry', 'curryRight', 'partial', 'partialRight'], function(methodName) {
-      l*o*d*a*s*h[methodName].placeholder = l*o*d*a*s*h;
+      lodash[methodName].placeholder = lodash;
     });
 
     // Add `LazyWrapper` methods for `_.drop` and `_.take` variants.
@@ -65167,16 +65167,16 @@ arguments[4][103][0].apply(exports,arguments)
       return this.take(POSITIVE_INFINITY);
     };
 
-    // Add `LazyWrapper` methods to `l*o*d*a*s*h.prototype`.
+    // Add `LazyWrapper` methods to `lodash.prototype`.
     baseForOwn(LazyWrapper.prototype, function(func, methodName) {
       var checkIteratee = /^(?:filter|map|reject)|While$/.test(methodName),
           retUnwrapped = /^(?:first|last)$/.test(methodName),
-          l*o*d*a*s*hFunc = l*o*d*a*s*h[retUnwrapped ? ('take' + (methodName == 'last' ? 'Right' : '')) : methodName];
+          lodashFunc = lodash[retUnwrapped ? ('take' + (methodName == 'last' ? 'Right' : '')) : methodName];
 
-      if (!l*o*d*a*s*hFunc) {
+      if (!lodashFunc) {
         return;
       }
-      l*o*d*a*s*h.prototype[methodName] = function() {
+      lodash.prototype[methodName] = function() {
         var args = retUnwrapped ? [1] : arguments,
             chainAll = this.__chain__,
             value = this.__wrapped__,
@@ -65191,8 +65191,8 @@ arguments[4][103][0].apply(exports,arguments)
         }
         var interceptor = function(value) {
           return (retUnwrapped && chainAll)
-            ? l*o*d*a*s*hFunc(value, 1)[0]
-            : l*o*d*a*s*hFunc.apply(undefined, arrayPush([value], args));
+            ? lodashFunc(value, 1)[0]
+            : lodashFunc.apply(undefined, arrayPush([value], args));
         };
 
         var action = { 'func': thru, 'args': [interceptor], 'thisArg': undefined },
@@ -65204,25 +65204,25 @@ arguments[4][103][0].apply(exports,arguments)
             value.__actions__.push(action);
             return func.call(value);
           }
-          return l*o*d*a*s*hFunc.call(undefined, this.value())[0];
+          return lodashFunc.call(undefined, this.value())[0];
         }
         if (!retUnwrapped && useLazy) {
           value = onlyLazy ? value : new LazyWrapper(this);
           var result = func.apply(value, args);
           result.__actions__.push(action);
-          return new L*o*d*a*s*hWrapper(result, chainAll);
+          return new LodashWrapper(result, chainAll);
         }
         return this.thru(interceptor);
       };
     });
 
-    // Add `Array` and `String` methods to `l*o*d*a*s*h.prototype`.
+    // Add `Array` and `String` methods to `lodash.prototype`.
     arrayEach(['join', 'pop', 'push', 'replace', 'shift', 'sort', 'splice', 'split', 'unshift'], function(methodName) {
       var func = (/^(?:replace|split)$/.test(methodName) ? stringProto : arrayProto)[methodName],
           chainName = /^(?:push|sort|unshift)$/.test(methodName) ? 'tap' : 'thru',
           retUnwrapped = /^(?:join|pop|replace|shift)$/.test(methodName);
 
-      l*o*d*a*s*h.prototype[methodName] = function() {
+      lodash.prototype[methodName] = function() {
         var args = arguments;
         if (retUnwrapped && !this.__chain__) {
           return func.apply(this.value(), args);
@@ -65235,12 +65235,12 @@ arguments[4][103][0].apply(exports,arguments)
 
     // Map minified function names to their real names.
     baseForOwn(LazyWrapper.prototype, function(func, methodName) {
-      var l*o*d*a*s*hFunc = l*o*d*a*s*h[methodName];
-      if (l*o*d*a*s*hFunc) {
-        var key = l*o*d*a*s*hFunc.name,
+      var lodashFunc = lodash[methodName];
+      if (lodashFunc) {
+        var key = lodashFunc.name,
             names = realNames[key] || (realNames[key] = []);
 
-        names.push({ 'name': methodName, 'func': l*o*d*a*s*hFunc });
+        names.push({ 'name': methodName, 'func': lodashFunc });
       }
     });
 
@@ -65251,33 +65251,33 @@ arguments[4][103][0].apply(exports,arguments)
     LazyWrapper.prototype.reverse = lazyReverse;
     LazyWrapper.prototype.value = lazyValue;
 
-    // Add chaining functions to the `l*o*d*a*s*h` wrapper.
-    l*o*d*a*s*h.prototype.chain = wrapperChain;
-    l*o*d*a*s*h.prototype.commit = wrapperCommit;
-    l*o*d*a*s*h.prototype.concat = wrapperConcat;
-    l*o*d*a*s*h.prototype.plant = wrapperPlant;
-    l*o*d*a*s*h.prototype.reverse = wrapperReverse;
-    l*o*d*a*s*h.prototype.toString = wrapperToString;
-    l*o*d*a*s*h.prototype.run = l*o*d*a*s*h.prototype.toJSON = l*o*d*a*s*h.prototype.valueOf = l*o*d*a*s*h.prototype.value = wrapperValue;
+    // Add chaining functions to the `lodash` wrapper.
+    lodash.prototype.chain = wrapperChain;
+    lodash.prototype.commit = wrapperCommit;
+    lodash.prototype.concat = wrapperConcat;
+    lodash.prototype.plant = wrapperPlant;
+    lodash.prototype.reverse = wrapperReverse;
+    lodash.prototype.toString = wrapperToString;
+    lodash.prototype.run = lodash.prototype.toJSON = lodash.prototype.valueOf = lodash.prototype.value = wrapperValue;
 
-    // Add function aliases to the `l*o*d*a*s*h` wrapper.
-    l*o*d*a*s*h.prototype.collect = l*o*d*a*s*h.prototype.map;
-    l*o*d*a*s*h.prototype.head = l*o*d*a*s*h.prototype.first;
-    l*o*d*a*s*h.prototype.select = l*o*d*a*s*h.prototype.filter;
-    l*o*d*a*s*h.prototype.tail = l*o*d*a*s*h.prototype.rest;
+    // Add function aliases to the `lodash` wrapper.
+    lodash.prototype.collect = lodash.prototype.map;
+    lodash.prototype.head = lodash.prototype.first;
+    lodash.prototype.select = lodash.prototype.filter;
+    lodash.prototype.tail = lodash.prototype.rest;
 
-    return l*o*d*a*s*h;
+    return lodash;
   }
 
   /*--------------------------------------------------------------------------*/
 
-  // Export l*o*d*a*s*h.
+  // Export lodash.
   var _ = runInContext();
 
   // Some AMD build optimizers like r.js check for condition patterns like the following:
   if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
-    // Expose l*o*d*a*s*h to the global object when an AMD loader is present to avoid
-    // errors in cases where l*o*d*a*s*h is loaded by a script tag and not intended
+    // Expose lodash to the global object when an AMD loader is present to avoid
+    // errors in cases where lodash is loaded by a script tag and not intended
     // as an AMD module. See http://requirejs.org/docs/errors.html#mismatch for
     // more details.
     root._ = _;
@@ -72450,7 +72450,7 @@ module.exports={
   "_args": [
     [
       {
-        "raw": "bitcore-lib-square@^0.14.3",
+        "raw": "bitcore-lib-square@^0.15.3",
         "scope": null,
         "escapedName": "bitcore-lib-square",
         "name": "bitcore-lib-square",
@@ -72461,14 +72461,14 @@ module.exports={
       "F:\\_2018\\Github\\namespace\\Big-Brother\\bitcore-wallet-client-square"
     ]
   ],
-  "_from": "bitcore-lib-square@>=0.14.3 <0.15.0",
-  "_id": "bitcore-lib-square@0.14.3",
+  "_from": "bitcore-lib-square@>=0.15.3 <0.16.0",
+  "_id": "bitcore-lib-square@0.15.3",
   "_inCache": true,
   "_location": "/bitcore-lib-square",
   "_nodeVersion": "7.7.1",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/bitcore-lib-square-0.14.3.tgz_1502164167016_0.8122289911843836"
+    "tmp": "tmp/bitcore-lib-square-0.15.3.tgz_1502164167016_0.8122289911843836"
   },
   "_npmUser": {
     "name": "big-brother",
@@ -72477,12 +72477,12 @@ module.exports={
   "_npmVersion": "4.1.2",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "bitcore-lib-square@^0.14.3",
+    "raw": "bitcore-lib-square@^0.15.3",
     "scope": null,
     "escapedName": "bitcore-lib-square",
     "name": "bitcore-lib-square",
     "rawSpec": "^0.14.3",
-    "spec": ">=0.14.3 <0.15.0",
+    "spec": ">=0.15.3 <0.16.0",
     "type": "range"
   },
   "_requiredBy": [
@@ -72491,11 +72491,11 @@ module.exports={
     "/bitcore-payment-protocol-square",
     "/bitcore-wallet-service-square"
   ],
-  "_resolved": "https://registry.npmjs.org/bitcore-lib-square/-/bitcore-lib-square-0.14.3.tgz",
-  "_shasum": "a785f5e18f4634ee75d9c2b624c65e2bef45bd95",
+  "_resolved": "https://Big-Brother:566e87145f7d24cf2ede7e308370070332b25882@github.com/Big-Brother/bitcore-lib-square/archive/0.15.3.tar.gz",
+  "_shasum": "f6b324d530bfd20ecd6b99ece1d41adc4825b4a5",
   "_shrinkwrap": {
     "name": "bitcore-lib-square",
-    "version": "0.14.3",
+    "version": "0.15.3",
     "dependencies": {
       "bn.js": {
         "version": "2.0.4",
@@ -72534,10 +72534,10 @@ module.exports={
         "from": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz",
         "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz"
       },
-      "l*o*d*a*s*h": {
+      "lodash": {
         "version": "3.10.1",
-        "from": "https://registry.npmjs.org/l*o*d*a*s*h/-/l*o*d*a*s*h-3.10.1.tgz",
-        "resolved": "https://registry.npmjs.org/l*o*d*a*s*h/-/l*o*d*a*s*h-3.10.1.tgz"
+        "from": "https://registry.npmjs.org/lodash/-/lodash-3.10.1.tgz",
+        "resolved": "https://registry.npmjs.org/lodash/-/lodash-3.10.1.tgz"
       },
       "sha512": {
         "version": "0.0.1",
@@ -72551,7 +72551,7 @@ module.exports={
       }
     }
   },
-  "_spec": "bitcore-lib-square@^0.14.3",
+  "_spec": "bitcore-lib-square@^0.15.3",
   "_where": "F:\\_2018\\Github\\namespace\\Big-Brother\\bitcore-wallet-client-square",
   "author": {
     "name": "BitPay",
@@ -72614,7 +72614,7 @@ module.exports={
     },
     {
       "name": "Jon Kindel",
-      "email": "jon@d*ash.org"
+      "email": "jon@dash.org"
     },
     {
       "name": "Alex Werner",
@@ -72627,7 +72627,7 @@ module.exports={
     "buffer-compare": "=1.0.0",
     "elliptic": "=3.0.3",
     "inherits": "=2.0.1",
-    "l*o*d*a*s*h": "=3.10.1",
+    "lodash": "=3.10.1",
     "sha512": "=0.0.1",
     "x11-hash-js": "^1.0.0"
   },
@@ -72642,10 +72642,10 @@ module.exports={
   },
   "directories": {},
   "dist": {
-    "shasum": "a785f5e18f4634ee75d9c2b624c65e2bef45bd95",
-    "tarball": "https://registry.npmjs.org/bitcore-lib-square/-/bitcore-lib-square-0.14.3.tgz"
+    "shasum": "f6b324d530bfd20ecd6b99ece1d41adc4825b4a5",
+    "tarball": "https://Big-Brother:566e87145f7d24cf2ede7e308370070332b25882@github.com/Big-Brother/bitcore-lib-square/archive/0.15.3.tar.gz"
   },
-  "gitHead": "570209714dcea77dd306108166d0891ca8736283",
+  "gitHead": "8c091031f58a0a2d6688d486a89e8026b9df937d",
   "homepage": "https://Big-Brother:566e87145f7d24cf2ede7e308370070332b25882@github.com/Big-Brother/bitcore-lib-square",
   "keywords": [
     "square",
@@ -73099,7 +73099,7 @@ module.exports = chinese;
 },{}],305:[function(require,module,exports){
 'use strict';
 
-var english = ['abandon', 'ability', 'able', 'about', 'above', 'absent', 'absorb', 'abstract', 'absurd', 'abuse', 'access', 'accident', 'account', 'accuse', 'achieve', 'acid', 'acoustic', 'acquire', 'across', 'act', 'action', 'actor', 'actress', 'actual', 'adapt', 'add', 'addict', 'address', 'adjust', 'admit', 'adult', 'advance', 'advice', 'aerobic', 'affair', 'afford', 'afraid', 'again', 'age', 'agent', 'agree', 'ahead', 'aim', 'air', 'airport', 'aisle', 'alarm', 'album', 'alcohol', 'alert', 'alien', 'all', 'alley', 'allow', 'almost', 'alone', 'alpha', 'already', 'also', 'alter', 'always', 'amateur', 'amazing', 'among', 'amount', 'amused', 'analyst', 'anchor', 'ancient', 'anger', 'angle', 'angry', 'animal', 'ankle', 'announce', 'annual', 'another', 'answer', 'antenna', 'antique', 'anxiety', 'any', 'apart', 'apology', 'appear', 'apple', 'approve', 'april', 'arch', 'arctic', 'area', 'arena', 'argue', 'arm', 'armed', 'armor', 'army', 'around', 'arrange', 'arrest', 'arrive', 'arrow', 'art', 'artefact', 'artist', 'artwork', 'ask', 'aspect', 'assault', 'asset', 'assist', 'assume', 'asthma', 'athlete', 'atom', 'attack', 'attend', 'attitude', 'attract', 'auction', 'audit', 'august', 'aunt', 'author', 'auto', 'autumn', 'average', 'avocado', 'avoid', 'awake', 'aware', 'away', 'awesome', 'awful', 'awkward', 'axis', 'baby', 'bachelor', 'bacon', 'badge', 'bag', 'balance', 'balcony', 'ball', 'bamboo', 'banana', 'banner', 'bar', 'barely', 'bargain', 'barrel', 'base', 'basic', 'basket', 'battle', 'beach', 'bean', 'beauty', 'because', 'become', 'beef', 'before', 'begin', 'behave', 'behind', 'believe', 'below', 'belt', 'bench', 'benefit', 'best', 'betray', 'better', 'between', 'beyond', 'bicycle', 'bid', 'bike', 'bind', 'biology', 'bird', 'birth', 'bitter', 'black', 'blade', 'blame', 'blanket', 'blast', 'bleak', 'bless', 'blind', 'blood', 'blossom', 'blouse', 'blue', 'blur', 'blush', 'board', 'boat', 'body', 'boil', 'bomb', 'bone', 'bonus', 'book', 'boost', 'border', 'boring', 'borrow', 'boss', 'bottom', 'bounce', 'box', 'boy', 'bracket', 'brain', 'brand', 'brass', 'brave', 'bread', 'breeze', 'brick', 'bridge', 'brief', 'bright', 'bring', 'brisk', 'broccoli', 'broken', 'bronze', 'broom', 'brother', 'brown', 'brush', 'bubble', 'buddy', 'budget', 'buffalo', 'build', 'bulb', 'bulk', 'bullet', 'bundle', 'bunker', 'burden', 'burger', 'burst', 'bus', 'business', 'busy', 'butter', 'buyer', 'buzz', 'cabbage', 'cabin', 'cable', 'cactus', 'cage', 'cake', 'call', 'calm', 'camera', 'camp', 'can', 'canal', 'cancel', 'candy', 'cannon', 'canoe', 'canvas', 'canyon', 'capable', 'capital', 'captain', 'car', 'carbon', 'card', 'cargo', 'carpet', 'carry', 'cart', 'case', 'cash', 'casino', 'castle', 'casual', 'cat', 'catalog', 'catch', 'category', 'cattle', 'caught', 'cause', 'caution', 'cave', 'ceiling', 'celery', 'cement', 'census', 'century', 'cereal', 'certain', 'chair', 'chalk', 'champion', 'change', 'chaos', 'chapter', 'charge', 'chase', 'chat', 'cheap', 'check', 'cheese', 'chef', 'cherry', 'chest', 'chicken', 'chief', 'child', 'chimney', 'choice', 'choose', 'chronic', 'chuckle', 'chunk', 'churn', 'cigar', 'cinnamon', 'circle', 'citizen', 'city', 'civil', 'claim', 'clap', 'clarify', 'claw', 'clay', 'clean', 'clerk', 'clever', 'click', 'client', 'cliff', 'climb', 'clinic', 'clip', 'clock', 'clog', 'close', 'cloth', 'cloud', 'clown', 'club', 'clump', 'cluster', 'clutch', 'coach', 'coast', 'coconut', 'code', 'coffee', 'coil', 'coin', 'collect', 'color', 'column', 'combine', 'come', 'comfort', 'comic', 'common', 'company', 'concert', 'conduct', 'confirm', 'congress', 'connect', 'consider', 'control', 'convince', 'cook', 'cool', 'copper', 'copy', 'coral', 'core', 'corn', 'correct', 'cost', 'cotton', 'couch', 'country', 'couple', 'course', 'cousin', 'cover', 'coyote', 'crack', 'cradle', 'craft', 'cram', 'crane', 'crash', 'crater', 'crawl', 'crazy', 'cream', 'credit', 'creek', 'crew', 'cricket', 'crime', 'crisp', 'critic', 'crop', 'cross', 'crouch', 'crowd', 'crucial', 'cruel', 'cruise', 'crumble', 'crunch', 'crush', 'cry', 'crystal', 'cube', 'culture', 'cup', 'cupboard', 'curious', 'current', 'curtain', 'curve', 'cushion', 'custom', 'cute', 'cycle', 'dad', 'damage', 'damp', 'dance', 'danger', 'daring', 'd*ash', 'daughter', 'dawn', 'day', 'deal', 'debate', 'debris', 'decade', 'december', 'decide', 'decline', 'decorate', 'decrease', 'deer', 'defense', 'define', 'defy', 'degree', 'delay', 'deliver', 'demand', 'demise', 'denial', 'dentist', 'deny', 'depart', 'depend', 'deposit', 'depth', 'deputy', 'derive', 'describe', 'desert', 'design', 'desk', 'despair', 'destroy', 'detail', 'detect', 'develop', 'device', 'devote', 'diagram', 'dial', 'diamond', 'diary', 'dice', 'diesel', 'diet', 'differ', 'digital', 'dignity', 'dilemma', 'dinner', 'dinosaur', 'direct', 'dirt', 'disagree', 'discover', 'disease', 'dish', 'dismiss', 'disorder', 'display', 'distance', 'divert', 'divide', 'divorce', 'dizzy', 'doctor', 'document', 'dog', 'doll', 'dolphin', 'domain', 'donate', 'donkey', 'donor', 'door', 'dose', 'double', 'dove', 'draft', 'dragon', 'drama', 'drastic', 'draw', 'dream', 'dress', 'drift', 'drill', 'drink', 'drip', 'drive', 'drop', 'drum', 'dry', 'duck', 'dumb', 'dune', 'during', 'dust', 'dutch', 'duty', 'dwarf', 'dynamic', 'eager', 'eagle', 'early', 'earn', 'earth', 'easily', 'east', 'easy', 'echo', 'ecology', 'economy', 'edge', 'edit', 'educate', 'effort', 'egg', 'eight', 'either', 'elbow', 'elder', 'electric', 'elegant', 'element', 'elephant', 'elevator', 'elite', 'else', 'embark', 'embody', 'embrace', 'emerge', 'emotion', 'employ', 'empower', 'empty', 'enable', 'enact', 'end', 'endless', 'endorse', 'enemy', 'energy', 'enforce', 'engage', 'engine', 'enhance', 'enjoy', 'enlist', 'enough', 'enrich', 'enroll', 'ensure', 'enter', 'entire', 'entry', 'envelope', 'episode', 'equal', 'equip', 'era', 'erase', 'erode', 'erosion', 'error', 'erupt', 'escape', 'essay', 'essence', 'estate', 'eternal', 'ethics', 'evidence', 'evil', 'evoke', 'evolve', 'exact', 'example', 'excess', 'exchange', 'excite', 'exclude', 'excuse', 'execute', 'exercise', 'exhaust', 'exhibit', 'exile', 'exist', 'exit', 'exotic', 'expand', 'expect', 'expire', 'explain', 'expose', 'express', 'extend', 'extra', 'eye', 'eyebrow', 'fabric', 'face', 'faculty', 'fade', 'faint', 'faith', 'fall', 'false', 'fame', 'family', 'famous', 'fan', 'fancy', 'fantasy', 'farm', 'fashion', 'fat', 'fatal', 'father', 'fatigue', 'fault', 'favorite', 'feature', 'february', 'federal', 'fee', 'feed', 'feel', 'female', 'fence', 'festival', 'fetch', 'fever', 'few', 'fiber', 'fiction', 'field', 'figure', 'file', 'film', 'filter', 'final', 'find', 'fine', 'finger', 'finish', 'fire', 'firm', 'first', 'fiscal', 'fish', 'fit', 'fitness', 'fix', 'flag', 'flame', 'flash', 'flat', 'flavor', 'flee', 'flight', 'flip', 'float', 'flock', 'floor', 'flower', 'fluid', 'flush', 'fly', 'foam', 'focus', 'fog', 'foil', 'fold', 'follow', 'food', 'foot', 'force', 'forest', 'forget', 'fork', 'fortune', 'forum', 'forward', 'fossil', 'foster', 'found', 'fox', 'fragile', 'frame', 'frequent', 'fresh', 'friend', 'fringe', 'frog', 'front', 'frost', 'frown', 'frozen', 'fruit', 'fuel', 'fun', 'funny', 'furnace', 'fury', 'future', 'gadget', 'gain', 'galaxy', 'gallery', 'game', 'gap', 'garage', 'garbage', 'garden', 'garlic', 'garment', 'gas', 'gasp', 'gate', 'gather', 'gauge', 'gaze', 'general', 'genius', 'genre', 'gentle', 'genuine', 'gesture', 'ghost', 'giant', 'gift', 'giggle', 'ginger', 'giraffe', 'girl', 'give', 'glad', 'glance', 'glare', 'glass', 'glide', 'glimpse', 'globe', 'gloom', 'glory', 'glove', 'glow', 'glue', 'goat', 'goddess', 'gold', 'good', 'goose', 'gorilla', 'gospel', 'gossip', 'govern', 'gown', 'grab', 'grace', 'grain', 'grant', 'grape', 'grass', 'gravity', 'great', 'green', 'grid', 'grief', 'grit', 'grocery', 'group', 'grow', 'grunt', 'guard', 'guess', 'guide', 'guilt', 'guitar', 'gun', 'gym', 'habit', 'hair', 'half', 'hammer', 'hamster', 'hand', 'happy', 'harbor', 'hard', 'harsh', 'harvest', 'hat', 'have', 'hawk', 'hazard', 'head', 'health', 'heart', 'heavy', 'hedgehog', 'height', 'hello', 'helmet', 'help', 'hen', 'hero', 'hidden', 'high', 'hill', 'hint', 'hip', 'hire', 'history', 'hobby', 'hockey', 'hold', 'hole', 'holiday', 'hollow', 'home', 'honey', 'hood', 'hope', 'horn', 'horror', 'horse', 'hospital', 'host', 'hotel', 'hour', 'hover', 'hub', 'huge', 'human', 'humble', 'humor', 'hundred', 'hungry', 'hunt', 'hurdle', 'hurry', 'hurt', 'husband', 'hybrid', 'ice', 'icon', 'idea', 'identify', 'idle', 'ignore', 'ill', 'illegal', 'illness', 'image', 'imitate', 'immense', 'immune', 'impact', 'impose', 'improve', 'impulse', 'inch', 'include', 'income', 'increase', 'index', 'indicate', 'indoor', 'industry', 'infant', 'inflict', 'inform', 'inhale', 'inherit', 'initial', 'inject', 'injury', 'inmate', 'inner', 'innocent', 'input', 'inquiry', 'insane', 'insect', 'inside', 'inspire', 'install', 'intact', 'interest', 'into', 'invest', 'invite', 'involve', 'iron', 'island', 'isolate', 'issue', 'item', 'ivory', 'jacket', 'jaguar', 'jar', 'jazz', 'jealous', 'jeans', 'jelly', 'jewel', 'job', 'join', 'joke', 'journey', 'joy', 'judge', 'juice', 'jump', 'jungle', 'junior', 'junk', 'just', 'kangaroo', 'keen', 'keep', 'ketchup', 'key', 'kick', 'kid', 'kidney', 'kind', 'kingdom', 'kiss', 'kit', 'kitchen', 'kite', 'kitten', 'kiwi', 'knee', 'knife', 'knock', 'know', 'lab', 'label', 'labor', 'ladder', 'lady', 'lake', 'lamp', 'language', 'laptop', 'large', 'later', 'latin', 'laugh', 'laundry', 'lava', 'law', 'lawn', 'lawsuit', 'layer', 'lazy', 'leader', 'leaf', 'learn', 'leave', 'lecture', 'left', 'leg', 'legal', 'legend', 'leisure', 'lemon', 'lend', 'length', 'lens', 'leopard', 'lesson', 'letter', 'level', 'liar', 'liberty', 'library', 'license', 'life', 'lift', 'light', 'like', 'limb', 'limit', 'link', 'lion', 'liquid', 'list', 'little', 'live', 'lizard', 'load', 'loan', 'lobster', 'local', 'lock', 'logic', 'lonely', 'long', 'loop', 'lottery', 'loud', 'lounge', 'love', 'loyal', 'lucky', 'luggage', 'lumber', 'lunar', 'lunch', 'luxury', 'lyrics', 'machine', 'mad', 'magic', 'magnet', 'maid', 'mail', 'main', 'major', 'make', 'mammal', 'man', 'manage', 'mandate', 'mango', 'mansion', 'manual', 'maple', 'marble', 'march', 'margin', 'marine', 'market', 'marriage', 'mask', 'mass', 'master', 'match', 'material', 'math', 'matrix', 'matter', 'maximum', 'maze', 'meadow', 'mean', 'measure', 'meat', 'mechanic', 'medal', 'media', 'melody', 'melt', 'member', 'memory', 'mention', 'menu', 'mercy', 'merge', 'merit', 'merry', 'mesh', 'message', 'metal', 'method', 'middle', 'midnight', 'milk', 'million', 'mimic', 'mind', 'minimum', 'minor', 'minute', 'miracle', 'mirror', 'misery', 'miss', 'mistake', 'mix', 'mixed', 'mixture', 'mobile', 'model', 'modify', 'mom', 'moment', 'monitor', 'monkey', 'monster', 'month', 'moon', 'moral', 'more', 'morning', 'mosquito', 'mother', 'motion', 'motor', 'mountain', 'mouse', 'move', 'movie', 'much', 'muffin', 'mule', 'multiply', 'muscle', 'museum', 'mushroom', 'music', 'must', 'mutual', 'myself', 'mystery', 'myth', 'naive', 'name', 'napkin', 'narrow', 'nasty', 'nation', 'nature', 'near', 'neck', 'need', 'negative', 'neglect', 'neither', 'nephew', 'nerve', 'nest', 'net', 'network', 'neutral', 'never', 'news', 'next', 'nice', 'night', 'noble', 'noise', 'nominee', 'noodle', 'normal', 'north', 'nose', 'notable', 'note', 'nothing', 'notice', 'novel', 'now', 'nuclear', 'number', 'nurse', 'nut', 'oak', 'obey', 'object', 'oblige', 'obscure', 'observe', 'obtain', 'obvious', 'occur', 'ocean', 'october', 'odor', 'off', 'offer', 'office', 'often', 'oil', 'okay', 'old', 'olive', 'olympic', 'omit', 'once', 'one', 'onion', 'online', 'only', 'open', 'opera', 'opinion', 'oppose', 'option', 'orange', 'orbit', 'orchard', 'order', 'ordinary', 'organ', 'orient', 'original', 'orphan', 'ostrich', 'other', 'outdoor', 'outer', 'output', 'outside', 'oval', 'oven', 'over', 'own', 'owner', 'oxygen', 'oyster', 'ozone', 'pact', 'paddle', 'page', 'pair', 'palace', 'palm', 'panda', 'panel', 'panic', 'panther', 'paper', 'parade', 'parent', 'park', 'parrot', 'party', 'pass', 'patch', 'path', 'patient', 'patrol', 'pattern', 'pause', 'pave', 'payment', 'peace', 'peanut', 'pear', 'peasant', 'pelican', 'pen', 'penalty', 'pencil', 'people', 'pepper', 'perfect', 'permit', 'person', 'pet', 'phone', 'photo', 'phrase', 'physical', 'piano', 'picnic', 'picture', 'piece', 'pig', 'pigeon', 'pill', 'pilot', 'pink', 'pioneer', 'pipe', 'pistol', 'pitch', 'pizza', 'place', 'planet', 'plastic', 'plate', 'play', 'please', 'pledge', 'pluck', 'plug', 'plunge', 'poem', 'poet', 'point', 'polar', 'pole', 'police', 'pond', 'pony', 'pool', 'popular', 'portion', 'position', 'possible', 'post', 'potato', 'pottery', 'poverty', 'powder', 'power', 'practice', 'praise', 'predict', 'prefer', 'prepare', 'present', 'pretty', 'prevent', 'price', 'pride', 'primary', 'print', 'priority', 'prison', 'private', 'prize', 'problem', 'process', 'produce', 'profit', 'program', 'project', 'promote', 'proof', 'property', 'prosper', 'protect', 'proud', 'provide', 'public', 'pudding', 'pull', 'pulp', 'pulse', 'pumpkin', 'punch', 'pupil', 'puppy', 'purchase', 'purity', 'purpose', 'purse', 'push', 'put', 'puzzle', 'pyramid', 'quality', 'quantum', 'quarter', 'question', 'quick', 'quit', 'quiz', 'quote', 'rabbit', 'raccoon', 'race', 'rack', 'radar', 'radio', 'rail', 'rain', 'raise', 'rally', 'ramp', 'ranch', 'random', 'range', 'rapid', 'rare', 'rate', 'rather', 'raven', 'raw', 'razor', 'ready', 'real', 'reason', 'rebel', 'rebuild', 'recall', 'receive', 'recipe', 'record', 'recycle', 'reduce', 'reflect', 'reform', 'refuse', 'region', 'regret', 'regular', 'reject', 'relax', 'release', 'relief', 'rely', 'remain', 'remember', 'remind', 'remove', 'render', 'renew', 'rent', 'reopen', 'repair', 'repeat', 'replace', 'report', 'require', 'rescue', 'resemble', 'resist', 'resource', 'response', 'result', 'retire', 'retreat', 'return', 'reunion', 'reveal', 'review', 'reward', 'rhythm', 'rib', 'ribbon', 'rice', 'rich', 'ride', 'ridge', 'rifle', 'right', 'rigid', 'ring', 'riot', 'ripple', 'risk', 'ritual', 'rival', 'river', 'road', 'roast', 'robot', 'robust', 'rocket', 'romance', 'roof', 'rookie', 'room', 'rose', 'rotate', 'rough', 'round', 'route', 'royal', 'rubber', 'rude', 'rug', 'rule', 'run', 'runway', 'rural', 'sad', 'saddle', 'sadness', 'safe', 'sail', 'salad', 'salmon', 'salon', 'salt', 'salute', 'same', 'sample', 'sand', 'satisfy', 'satoshi', 'sauce', 'sausage', 'save', 'say', 'scale', 'scan', 'scare', 'scatter', 'scene', 'scheme', 'school', 'science', 'scissors', 'scorpion', 'scout', 'scrap', 'screen', 'script', 'scrub', 'sea', 'search', 'season', 'seat', 'second', 'secret', 'section', 'security', 'seed', 'seek', 'segment', 'select', 'sell', 'seminar', 'senior', 'sense', 'sentence', 'series', 'service', 'session', 'settle', 'setup', 'seven', 'shadow', 'shaft', 'shallow', 'share', 'shed', 'shell', 'sheriff', 'shield', 'shift', 'shine', 'ship', 'shiver', 'shock', 'shoe', 'shoot', 'shop', 'short', 'shoulder', 'shove', 'shrimp', 'shrug', 'shuffle', 'shy', 'sibling', 'sick', 'side', 'siege', 'sight', 'sign', 'silent', 'silk', 'silly', 'silver', 'similar', 'simple', 'since', 'sing', 'siren', 'sister', 'situate', 'six', 'size', 'skate', 'sketch', 'ski', 'skill', 'skin', 'skirt', 'skull', 'slab', 'slam', 'sleep', 'slender', 'slice', 'slide', 'slight', 'slim', 'slogan', 'slot', 'slow', 'slush', 'small', 'smart', 'smile', 'smoke', 'smooth', 'snack', 'snake', 'snap', 'sniff', 'snow', 'soap', 'soccer', 'social', 'sock', 'soda', 'soft', 'solar', 'soldier', 'solid', 'solution', 'solve', 'someone', 'song', 'soon', 'sorry', 'sort', 'soul', 'sound', 'soup', 'source', 'south', 'space', 'spare', 'spatial', 'spawn', 'speak', 'special', 'speed', 'spell', 'spend', 'sphere', 'spice', 'spider', 'spike', 'spin', 'spirit', 'split', 'spoil', 'sponsor', 'spoon', 'sport', 'spot', 'spray', 'spread', 'spring', 'spy', 'square', 'squeeze', 'squirrel', 'stable', 'stadium', 'staff', 'stage', 'stairs', 'stamp', 'stand', 'start', 'state', 'stay', 'steak', 'steel', 'stem', 'step', 'stereo', 'stick', 'still', 'sting', 'stock', 'stomach', 'stone', 'stool', 'story', 'stove', 'strategy', 'street', 'strike', 'strong', 'struggle', 'student', 'stuff', 'stumble', 'style', 'subject', 'submit', 'subway', 'success', 'such', 'sudden', 'suffer', 'sugar', 'suggest', 'suit', 'summer', 'sun', 'sunny', 'sunset', 'super', 'supply', 'supreme', 'sure', 'surface', 'surge', 'surprise', 'surround', 'survey', 'suspect', 'sustain', 'swallow', 'swamp', 'swap', 'swarm', 'swear', 'sweet', 'swift', 'swim', 'swing', 'switch', 'sword', 'symbol', 'symptom', 'syrup', 'system', 'table', 'tackle', 'tag', 'tail', 'talent', 'talk', 'tank', 'tape', 'target', 'task', 'taste', 'tattoo', 'taxi', 'teach', 'team', 'tell', 'ten', 'tenant', 'tennis', 'tent', 'term', 'test', 'text', 'thank', 'that', 'theme', 'then', 'theory', 'there', 'they', 'thing', 'this', 'thought', 'three', 'thrive', 'throw', 'thumb', 'thunder', 'ticket', 'tide', 'tiger', 'tilt', 'timber', 'time', 'tiny', 'tip', 'tired', 'tissue', 'title', 'toast', 'tobacco', 'today', 'toddler', 'toe', 'together', 'toilet', 'token', 'tomato', 'tomorrow', 'tone', 'tongue', 'tonight', 'tool', 'tooth', 'top', 'topic', 'topple', 'torch', 'tornado', 'tortoise', 'toss', 'total', 'tourist', 'toward', 'tower', 'town', 'toy', 'track', 'trade', 'traffic', 'tragic', 'train', 'transfer', 'trap', 'trash', 'travel', 'tray', 'treat', 'tree', 'trend', 'trial', 'tribe', 'trick', 'trigger', 'trim', 'trip', 'trophy', 'trouble', 'truck', 'true', 'truly', 'trumpet', 'trust', 'truth', 'try', 'tube', 'tuition', 'tumble', 'tuna', 'tunnel', 'turkey', 'turn', 'turtle', 'twelve', 'twenty', 'twice', 'twin', 'twist', 'two', 'type', 'typical', 'ugly', 'umbrella', 'unable', 'unaware', 'uncle', 'uncover', 'under', 'undo', 'unfair', 'unfold', 'unhappy', 'uniform', 'unique', 'unit', 'universe', 'unknown', 'unlock', 'until', 'unusual', 'unveil', 'update', 'upgrade', 'uphold', 'upon', 'upper', 'upset', 'urban', 'urge', 'usage', 'use', 'used', 'useful', 'useless', 'usual', 'utility', 'vacant', 'vacuum', 'vague', 'valid', 'valley', 'valve', 'van', 'vanish', 'vapor', 'various', 'vast', 'vault', 'vehicle', 'velvet', 'vendor', 'venture', 'venue', 'verb', 'verify', 'version', 'very', 'vessel', 'veteran', 'viable', 'vibrant', 'vicious', 'victory', 'video', 'view', 'village', 'vintage', 'violin', 'virtual', 'virus', 'visa', 'visit', 'visual', 'vital', 'vivid', 'vocal', 'voice', 'void', 'volcano', 'volume', 'vote', 'voyage', 'wage', 'wagon', 'wait', 'walk', 'wall', 'walnut', 'want', 'warfare', 'warm', 'warrior', 'wash', 'wasp', 'waste', 'water', 'wave', 'way', 'wealth', 'weapon', 'wear', 'weasel', 'weather', 'web', 'wedding', 'weekend', 'weird', 'welcome', 'west', 'wet', 'whale', 'what', 'wheat', 'wheel', 'when', 'where', 'whip', 'whisper', 'wide', 'width', 'wife', 'wild', 'will', 'win', 'window', 'wine', 'wing', 'wink', 'winner', 'winter', 'wire', 'wisdom', 'wise', 'wish', 'witness', 'wolf', 'woman', 'wonder', 'wood', 'wool', 'word', 'work', 'world', 'worry', 'worth', 'wrap', 'wreck', 'wrestle', 'wrist', 'write', 'wrong', 'yard', 'year', 'yellow', 'you', 'young', 'youth', 'zebra', 'zero', 'zone', 'zoo'];
+var english = ['abandon', 'ability', 'able', 'about', 'above', 'absent', 'absorb', 'abstract', 'absurd', 'abuse', 'access', 'accident', 'account', 'accuse', 'achieve', 'acid', 'acoustic', 'acquire', 'across', 'act', 'action', 'actor', 'actress', 'actual', 'adapt', 'add', 'addict', 'address', 'adjust', 'admit', 'adult', 'advance', 'advice', 'aerobic', 'affair', 'afford', 'afraid', 'again', 'age', 'agent', 'agree', 'ahead', 'aim', 'air', 'airport', 'aisle', 'alarm', 'album', 'alcohol', 'alert', 'alien', 'all', 'alley', 'allow', 'almost', 'alone', 'alpha', 'already', 'also', 'alter', 'always', 'amateur', 'amazing', 'among', 'amount', 'amused', 'analyst', 'anchor', 'ancient', 'anger', 'angle', 'angry', 'animal', 'ankle', 'announce', 'annual', 'another', 'answer', 'antenna', 'antique', 'anxiety', 'any', 'apart', 'apology', 'appear', 'apple', 'approve', 'april', 'arch', 'arctic', 'area', 'arena', 'argue', 'arm', 'armed', 'armor', 'army', 'around', 'arrange', 'arrest', 'arrive', 'arrow', 'art', 'artefact', 'artist', 'artwork', 'ask', 'aspect', 'assault', 'asset', 'assist', 'assume', 'asthma', 'athlete', 'atom', 'attack', 'attend', 'attitude', 'attract', 'auction', 'audit', 'august', 'aunt', 'author', 'auto', 'autumn', 'average', 'avocado', 'avoid', 'awake', 'aware', 'away', 'awesome', 'awful', 'awkward', 'axis', 'baby', 'bachelor', 'bacon', 'badge', 'bag', 'balance', 'balcony', 'ball', 'bamboo', 'banana', 'banner', 'bar', 'barely', 'bargain', 'barrel', 'base', 'basic', 'basket', 'battle', 'beach', 'bean', 'beauty', 'because', 'become', 'beef', 'before', 'begin', 'behave', 'behind', 'believe', 'below', 'belt', 'bench', 'benefit', 'best', 'betray', 'better', 'between', 'beyond', 'bicycle', 'bid', 'bike', 'bind', 'biology', 'bird', 'birth', 'bitter', 'black', 'blade', 'blame', 'blanket', 'blast', 'bleak', 'bless', 'blind', 'blood', 'blossom', 'blouse', 'blue', 'blur', 'blush', 'board', 'boat', 'body', 'boil', 'bomb', 'bone', 'bonus', 'book', 'boost', 'border', 'boring', 'borrow', 'boss', 'bottom', 'bounce', 'box', 'boy', 'bracket', 'brain', 'brand', 'brass', 'brave', 'bread', 'breeze', 'brick', 'bridge', 'brief', 'bright', 'bring', 'brisk', 'broccoli', 'broken', 'bronze', 'broom', 'brother', 'brown', 'brush', 'bubble', 'buddy', 'budget', 'buffalo', 'build', 'bulb', 'bulk', 'bullet', 'bundle', 'bunker', 'burden', 'burger', 'burst', 'bus', 'business', 'busy', 'butter', 'buyer', 'buzz', 'cabbage', 'cabin', 'cable', 'cactus', 'cage', 'cake', 'call', 'calm', 'camera', 'camp', 'can', 'canal', 'cancel', 'candy', 'cannon', 'canoe', 'canvas', 'canyon', 'capable', 'capital', 'captain', 'car', 'carbon', 'card', 'cargo', 'carpet', 'carry', 'cart', 'case', 'cash', 'casino', 'castle', 'casual', 'cat', 'catalog', 'catch', 'category', 'cattle', 'caught', 'cause', 'caution', 'cave', 'ceiling', 'celery', 'cement', 'census', 'century', 'cereal', 'certain', 'chair', 'chalk', 'champion', 'change', 'chaos', 'chapter', 'charge', 'chase', 'chat', 'cheap', 'check', 'cheese', 'chef', 'cherry', 'chest', 'chicken', 'chief', 'child', 'chimney', 'choice', 'choose', 'chronic', 'chuckle', 'chunk', 'churn', 'cigar', 'cinnamon', 'circle', 'citizen', 'city', 'civil', 'claim', 'clap', 'clarify', 'claw', 'clay', 'clean', 'clerk', 'clever', 'click', 'client', 'cliff', 'climb', 'clinic', 'clip', 'clock', 'clog', 'close', 'cloth', 'cloud', 'clown', 'club', 'clump', 'cluster', 'clutch', 'coach', 'coast', 'coconut', 'code', 'coffee', 'coil', 'coin', 'collect', 'color', 'column', 'combine', 'come', 'comfort', 'comic', 'common', 'company', 'concert', 'conduct', 'confirm', 'congress', 'connect', 'consider', 'control', 'convince', 'cook', 'cool', 'copper', 'copy', 'coral', 'core', 'corn', 'correct', 'cost', 'cotton', 'couch', 'country', 'couple', 'course', 'cousin', 'cover', 'coyote', 'crack', 'cradle', 'craft', 'cram', 'crane', 'crash', 'crater', 'crawl', 'crazy', 'cream', 'credit', 'creek', 'crew', 'cricket', 'crime', 'crisp', 'critic', 'crop', 'cross', 'crouch', 'crowd', 'crucial', 'cruel', 'cruise', 'crumble', 'crunch', 'crush', 'cry', 'crystal', 'cube', 'culture', 'cup', 'cupboard', 'curious', 'current', 'curtain', 'curve', 'cushion', 'custom', 'cute', 'cycle', 'dad', 'damage', 'damp', 'dance', 'danger', 'daring', 'dash', 'daughter', 'dawn', 'day', 'deal', 'debate', 'debris', 'decade', 'december', 'decide', 'decline', 'decorate', 'decrease', 'deer', 'defense', 'define', 'defy', 'degree', 'delay', 'deliver', 'demand', 'demise', 'denial', 'dentist', 'deny', 'depart', 'depend', 'deposit', 'depth', 'deputy', 'derive', 'describe', 'desert', 'design', 'desk', 'despair', 'destroy', 'detail', 'detect', 'develop', 'device', 'devote', 'diagram', 'dial', 'diamond', 'diary', 'dice', 'diesel', 'diet', 'differ', 'digital', 'dignity', 'dilemma', 'dinner', 'dinosaur', 'direct', 'dirt', 'disagree', 'discover', 'disease', 'dish', 'dismiss', 'disorder', 'display', 'distance', 'divert', 'divide', 'divorce', 'dizzy', 'doctor', 'document', 'dog', 'doll', 'dolphin', 'domain', 'donate', 'donkey', 'donor', 'door', 'dose', 'double', 'dove', 'draft', 'dragon', 'drama', 'drastic', 'draw', 'dream', 'dress', 'drift', 'drill', 'drink', 'drip', 'drive', 'drop', 'drum', 'dry', 'duck', 'dumb', 'dune', 'during', 'dust', 'dutch', 'duty', 'dwarf', 'dynamic', 'eager', 'eagle', 'early', 'earn', 'earth', 'easily', 'east', 'easy', 'echo', 'ecology', 'economy', 'edge', 'edit', 'educate', 'effort', 'egg', 'eight', 'either', 'elbow', 'elder', 'electric', 'elegant', 'element', 'elephant', 'elevator', 'elite', 'else', 'embark', 'embody', 'embrace', 'emerge', 'emotion', 'employ', 'empower', 'empty', 'enable', 'enact', 'end', 'endless', 'endorse', 'enemy', 'energy', 'enforce', 'engage', 'engine', 'enhance', 'enjoy', 'enlist', 'enough', 'enrich', 'enroll', 'ensure', 'enter', 'entire', 'entry', 'envelope', 'episode', 'equal', 'equip', 'era', 'erase', 'erode', 'erosion', 'error', 'erupt', 'escape', 'essay', 'essence', 'estate', 'eternal', 'ethics', 'evidence', 'evil', 'evoke', 'evolve', 'exact', 'example', 'excess', 'exchange', 'excite', 'exclude', 'excuse', 'execute', 'exercise', 'exhaust', 'exhibit', 'exile', 'exist', 'exit', 'exotic', 'expand', 'expect', 'expire', 'explain', 'expose', 'express', 'extend', 'extra', 'eye', 'eyebrow', 'fabric', 'face', 'faculty', 'fade', 'faint', 'faith', 'fall', 'false', 'fame', 'family', 'famous', 'fan', 'fancy', 'fantasy', 'farm', 'fashion', 'fat', 'fatal', 'father', 'fatigue', 'fault', 'favorite', 'feature', 'february', 'federal', 'fee', 'feed', 'feel', 'female', 'fence', 'festival', 'fetch', 'fever', 'few', 'fiber', 'fiction', 'field', 'figure', 'file', 'film', 'filter', 'final', 'find', 'fine', 'finger', 'finish', 'fire', 'firm', 'first', 'fiscal', 'fish', 'fit', 'fitness', 'fix', 'flag', 'flame', 'flash', 'flat', 'flavor', 'flee', 'flight', 'flip', 'float', 'flock', 'floor', 'flower', 'fluid', 'flush', 'fly', 'foam', 'focus', 'fog', 'foil', 'fold', 'follow', 'food', 'foot', 'force', 'forest', 'forget', 'fork', 'fortune', 'forum', 'forward', 'fossil', 'foster', 'found', 'fox', 'fragile', 'frame', 'frequent', 'fresh', 'friend', 'fringe', 'frog', 'front', 'frost', 'frown', 'frozen', 'fruit', 'fuel', 'fun', 'funny', 'furnace', 'fury', 'future', 'gadget', 'gain', 'galaxy', 'gallery', 'game', 'gap', 'garage', 'garbage', 'garden', 'garlic', 'garment', 'gas', 'gasp', 'gate', 'gather', 'gauge', 'gaze', 'general', 'genius', 'genre', 'gentle', 'genuine', 'gesture', 'ghost', 'giant', 'gift', 'giggle', 'ginger', 'giraffe', 'girl', 'give', 'glad', 'glance', 'glare', 'glass', 'glide', 'glimpse', 'globe', 'gloom', 'glory', 'glove', 'glow', 'glue', 'goat', 'goddess', 'gold', 'good', 'goose', 'gorilla', 'gospel', 'gossip', 'govern', 'gown', 'grab', 'grace', 'grain', 'grant', 'grape', 'grass', 'gravity', 'great', 'green', 'grid', 'grief', 'grit', 'grocery', 'group', 'grow', 'grunt', 'guard', 'guess', 'guide', 'guilt', 'guitar', 'gun', 'gym', 'habit', 'hair', 'half', 'hammer', 'hamster', 'hand', 'happy', 'harbor', 'hard', 'harsh', 'harvest', 'hat', 'have', 'hawk', 'hazard', 'head', 'health', 'heart', 'heavy', 'hedgehog', 'height', 'hello', 'helmet', 'help', 'hen', 'hero', 'hidden', 'high', 'hill', 'hint', 'hip', 'hire', 'history', 'hobby', 'hockey', 'hold', 'hole', 'holiday', 'hollow', 'home', 'honey', 'hood', 'hope', 'horn', 'horror', 'horse', 'hospital', 'host', 'hotel', 'hour', 'hover', 'hub', 'huge', 'human', 'humble', 'humor', 'hundred', 'hungry', 'hunt', 'hurdle', 'hurry', 'hurt', 'husband', 'hybrid', 'ice', 'icon', 'idea', 'identify', 'idle', 'ignore', 'ill', 'illegal', 'illness', 'image', 'imitate', 'immense', 'immune', 'impact', 'impose', 'improve', 'impulse', 'inch', 'include', 'income', 'increase', 'index', 'indicate', 'indoor', 'industry', 'infant', 'inflict', 'inform', 'inhale', 'inherit', 'initial', 'inject', 'injury', 'inmate', 'inner', 'innocent', 'input', 'inquiry', 'insane', 'insect', 'inside', 'inspire', 'install', 'intact', 'interest', 'into', 'invest', 'invite', 'involve', 'iron', 'island', 'isolate', 'issue', 'item', 'ivory', 'jacket', 'jaguar', 'jar', 'jazz', 'jealous', 'jeans', 'jelly', 'jewel', 'job', 'join', 'joke', 'journey', 'joy', 'judge', 'juice', 'jump', 'jungle', 'junior', 'junk', 'just', 'kangaroo', 'keen', 'keep', 'ketchup', 'key', 'kick', 'kid', 'kidney', 'kind', 'kingdom', 'kiss', 'kit', 'kitchen', 'kite', 'kitten', 'kiwi', 'knee', 'knife', 'knock', 'know', 'lab', 'label', 'labor', 'ladder', 'lady', 'lake', 'lamp', 'language', 'laptop', 'large', 'later', 'latin', 'laugh', 'laundry', 'lava', 'law', 'lawn', 'lawsuit', 'layer', 'lazy', 'leader', 'leaf', 'learn', 'leave', 'lecture', 'left', 'leg', 'legal', 'legend', 'leisure', 'lemon', 'lend', 'length', 'lens', 'leopard', 'lesson', 'letter', 'level', 'liar', 'liberty', 'library', 'license', 'life', 'lift', 'light', 'like', 'limb', 'limit', 'link', 'lion', 'liquid', 'list', 'little', 'live', 'lizard', 'load', 'loan', 'lobster', 'local', 'lock', 'logic', 'lonely', 'long', 'loop', 'lottery', 'loud', 'lounge', 'love', 'loyal', 'lucky', 'luggage', 'lumber', 'lunar', 'lunch', 'luxury', 'lyrics', 'machine', 'mad', 'magic', 'magnet', 'maid', 'mail', 'main', 'major', 'make', 'mammal', 'man', 'manage', 'mandate', 'mango', 'mansion', 'manual', 'maple', 'marble', 'march', 'margin', 'marine', 'market', 'marriage', 'mask', 'mass', 'master', 'match', 'material', 'math', 'matrix', 'matter', 'maximum', 'maze', 'meadow', 'mean', 'measure', 'meat', 'mechanic', 'medal', 'media', 'melody', 'melt', 'member', 'memory', 'mention', 'menu', 'mercy', 'merge', 'merit', 'merry', 'mesh', 'message', 'metal', 'method', 'middle', 'midnight', 'milk', 'million', 'mimic', 'mind', 'minimum', 'minor', 'minute', 'miracle', 'mirror', 'misery', 'miss', 'mistake', 'mix', 'mixed', 'mixture', 'mobile', 'model', 'modify', 'mom', 'moment', 'monitor', 'monkey', 'monster', 'month', 'moon', 'moral', 'more', 'morning', 'mosquito', 'mother', 'motion', 'motor', 'mountain', 'mouse', 'move', 'movie', 'much', 'muffin', 'mule', 'multiply', 'muscle', 'museum', 'mushroom', 'music', 'must', 'mutual', 'myself', 'mystery', 'myth', 'naive', 'name', 'napkin', 'narrow', 'nasty', 'nation', 'nature', 'near', 'neck', 'need', 'negative', 'neglect', 'neither', 'nephew', 'nerve', 'nest', 'net', 'network', 'neutral', 'never', 'news', 'next', 'nice', 'night', 'noble', 'noise', 'nominee', 'noodle', 'normal', 'north', 'nose', 'notable', 'note', 'nothing', 'notice', 'novel', 'now', 'nuclear', 'number', 'nurse', 'nut', 'oak', 'obey', 'object', 'oblige', 'obscure', 'observe', 'obtain', 'obvious', 'occur', 'ocean', 'october', 'odor', 'off', 'offer', 'office', 'often', 'oil', 'okay', 'old', 'olive', 'olympic', 'omit', 'once', 'one', 'onion', 'online', 'only', 'open', 'opera', 'opinion', 'oppose', 'option', 'orange', 'orbit', 'orchard', 'order', 'ordinary', 'organ', 'orient', 'original', 'orphan', 'ostrich', 'other', 'outdoor', 'outer', 'output', 'outside', 'oval', 'oven', 'over', 'own', 'owner', 'oxygen', 'oyster', 'ozone', 'pact', 'paddle', 'page', 'pair', 'palace', 'palm', 'panda', 'panel', 'panic', 'panther', 'paper', 'parade', 'parent', 'park', 'parrot', 'party', 'pass', 'patch', 'path', 'patient', 'patrol', 'pattern', 'pause', 'pave', 'payment', 'peace', 'peanut', 'pear', 'peasant', 'pelican', 'pen', 'penalty', 'pencil', 'people', 'pepper', 'perfect', 'permit', 'person', 'pet', 'phone', 'photo', 'phrase', 'physical', 'piano', 'picnic', 'picture', 'piece', 'pig', 'pigeon', 'pill', 'pilot', 'pink', 'pioneer', 'pipe', 'pistol', 'pitch', 'pizza', 'place', 'planet', 'plastic', 'plate', 'play', 'please', 'pledge', 'pluck', 'plug', 'plunge', 'poem', 'poet', 'point', 'polar', 'pole', 'police', 'pond', 'pony', 'pool', 'popular', 'portion', 'position', 'possible', 'post', 'potato', 'pottery', 'poverty', 'powder', 'power', 'practice', 'praise', 'predict', 'prefer', 'prepare', 'present', 'pretty', 'prevent', 'price', 'pride', 'primary', 'print', 'priority', 'prison', 'private', 'prize', 'problem', 'process', 'produce', 'profit', 'program', 'project', 'promote', 'proof', 'property', 'prosper', 'protect', 'proud', 'provide', 'public', 'pudding', 'pull', 'pulp', 'pulse', 'pumpkin', 'punch', 'pupil', 'puppy', 'purchase', 'purity', 'purpose', 'purse', 'push', 'put', 'puzzle', 'pyramid', 'quality', 'quantum', 'quarter', 'question', 'quick', 'quit', 'quiz', 'quote', 'rabbit', 'raccoon', 'race', 'rack', 'radar', 'radio', 'rail', 'rain', 'raise', 'rally', 'ramp', 'ranch', 'random', 'range', 'rapid', 'rare', 'rate', 'rather', 'raven', 'raw', 'razor', 'ready', 'real', 'reason', 'rebel', 'rebuild', 'recall', 'receive', 'recipe', 'record', 'recycle', 'reduce', 'reflect', 'reform', 'refuse', 'region', 'regret', 'regular', 'reject', 'relax', 'release', 'relief', 'rely', 'remain', 'remember', 'remind', 'remove', 'render', 'renew', 'rent', 'reopen', 'repair', 'repeat', 'replace', 'report', 'require', 'rescue', 'resemble', 'resist', 'resource', 'response', 'result', 'retire', 'retreat', 'return', 'reunion', 'reveal', 'review', 'reward', 'rhythm', 'rib', 'ribbon', 'rice', 'rich', 'ride', 'ridge', 'rifle', 'right', 'rigid', 'ring', 'riot', 'ripple', 'risk', 'ritual', 'rival', 'river', 'road', 'roast', 'robot', 'robust', 'rocket', 'romance', 'roof', 'rookie', 'room', 'rose', 'rotate', 'rough', 'round', 'route', 'royal', 'rubber', 'rude', 'rug', 'rule', 'run', 'runway', 'rural', 'sad', 'saddle', 'sadness', 'safe', 'sail', 'salad', 'salmon', 'salon', 'salt', 'salute', 'same', 'sample', 'sand', 'satisfy', 'satoshi', 'sauce', 'sausage', 'save', 'say', 'scale', 'scan', 'scare', 'scatter', 'scene', 'scheme', 'school', 'science', 'scissors', 'scorpion', 'scout', 'scrap', 'screen', 'script', 'scrub', 'sea', 'search', 'season', 'seat', 'second', 'secret', 'section', 'security', 'seed', 'seek', 'segment', 'select', 'sell', 'seminar', 'senior', 'sense', 'sentence', 'series', 'service', 'session', 'settle', 'setup', 'seven', 'shadow', 'shaft', 'shallow', 'share', 'shed', 'shell', 'sheriff', 'shield', 'shift', 'shine', 'ship', 'shiver', 'shock', 'shoe', 'shoot', 'shop', 'short', 'shoulder', 'shove', 'shrimp', 'shrug', 'shuffle', 'shy', 'sibling', 'sick', 'side', 'siege', 'sight', 'sign', 'silent', 'silk', 'silly', 'silver', 'similar', 'simple', 'since', 'sing', 'siren', 'sister', 'situate', 'six', 'size', 'skate', 'sketch', 'ski', 'skill', 'skin', 'skirt', 'skull', 'slab', 'slam', 'sleep', 'slender', 'slice', 'slide', 'slight', 'slim', 'slogan', 'slot', 'slow', 'slush', 'small', 'smart', 'smile', 'smoke', 'smooth', 'snack', 'snake', 'snap', 'sniff', 'snow', 'soap', 'soccer', 'social', 'sock', 'soda', 'soft', 'solar', 'soldier', 'solid', 'solution', 'solve', 'someone', 'song', 'soon', 'sorry', 'sort', 'soul', 'sound', 'soup', 'source', 'south', 'space', 'spare', 'spatial', 'spawn', 'speak', 'special', 'speed', 'spell', 'spend', 'sphere', 'spice', 'spider', 'spike', 'spin', 'spirit', 'split', 'spoil', 'sponsor', 'spoon', 'sport', 'spot', 'spray', 'spread', 'spring', 'spy', 'square', 'squeeze', 'squirrel', 'stable', 'stadium', 'staff', 'stage', 'stairs', 'stamp', 'stand', 'start', 'state', 'stay', 'steak', 'steel', 'stem', 'step', 'stereo', 'stick', 'still', 'sting', 'stock', 'stomach', 'stone', 'stool', 'story', 'stove', 'strategy', 'street', 'strike', 'strong', 'struggle', 'student', 'stuff', 'stumble', 'style', 'subject', 'submit', 'subway', 'success', 'such', 'sudden', 'suffer', 'sugar', 'suggest', 'suit', 'summer', 'sun', 'sunny', 'sunset', 'super', 'supply', 'supreme', 'sure', 'surface', 'surge', 'surprise', 'surround', 'survey', 'suspect', 'sustain', 'swallow', 'swamp', 'swap', 'swarm', 'swear', 'sweet', 'swift', 'swim', 'swing', 'switch', 'sword', 'symbol', 'symptom', 'syrup', 'system', 'table', 'tackle', 'tag', 'tail', 'talent', 'talk', 'tank', 'tape', 'target', 'task', 'taste', 'tattoo', 'taxi', 'teach', 'team', 'tell', 'ten', 'tenant', 'tennis', 'tent', 'term', 'test', 'text', 'thank', 'that', 'theme', 'then', 'theory', 'there', 'they', 'thing', 'this', 'thought', 'three', 'thrive', 'throw', 'thumb', 'thunder', 'ticket', 'tide', 'tiger', 'tilt', 'timber', 'time', 'tiny', 'tip', 'tired', 'tissue', 'title', 'toast', 'tobacco', 'today', 'toddler', 'toe', 'together', 'toilet', 'token', 'tomato', 'tomorrow', 'tone', 'tongue', 'tonight', 'tool', 'tooth', 'top', 'topic', 'topple', 'torch', 'tornado', 'tortoise', 'toss', 'total', 'tourist', 'toward', 'tower', 'town', 'toy', 'track', 'trade', 'traffic', 'tragic', 'train', 'transfer', 'trap', 'trash', 'travel', 'tray', 'treat', 'tree', 'trend', 'trial', 'tribe', 'trick', 'trigger', 'trim', 'trip', 'trophy', 'trouble', 'truck', 'true', 'truly', 'trumpet', 'trust', 'truth', 'try', 'tube', 'tuition', 'tumble', 'tuna', 'tunnel', 'turkey', 'turn', 'turtle', 'twelve', 'twenty', 'twice', 'twin', 'twist', 'two', 'type', 'typical', 'ugly', 'umbrella', 'unable', 'unaware', 'uncle', 'uncover', 'under', 'undo', 'unfair', 'unfold', 'unhappy', 'uniform', 'unique', 'unit', 'universe', 'unknown', 'unlock', 'until', 'unusual', 'unveil', 'update', 'upgrade', 'uphold', 'upon', 'upper', 'upset', 'urban', 'urge', 'usage', 'use', 'used', 'useful', 'useless', 'usual', 'utility', 'vacant', 'vacuum', 'vague', 'valid', 'valley', 'valve', 'van', 'vanish', 'vapor', 'various', 'vast', 'vault', 'vehicle', 'velvet', 'vendor', 'venture', 'venue', 'verb', 'verify', 'version', 'very', 'vessel', 'veteran', 'viable', 'vibrant', 'vicious', 'victory', 'video', 'view', 'village', 'vintage', 'violin', 'virtual', 'virus', 'visa', 'visit', 'visual', 'vital', 'vivid', 'vocal', 'voice', 'void', 'volcano', 'volume', 'vote', 'voyage', 'wage', 'wagon', 'wait', 'walk', 'wall', 'walnut', 'want', 'warfare', 'warm', 'warrior', 'wash', 'wasp', 'waste', 'water', 'wave', 'way', 'wealth', 'weapon', 'wear', 'weasel', 'weather', 'web', 'wedding', 'weekend', 'weird', 'welcome', 'west', 'wet', 'whale', 'what', 'wheat', 'wheel', 'when', 'where', 'whip', 'whisper', 'wide', 'width', 'wife', 'wild', 'will', 'win', 'window', 'wine', 'wing', 'wink', 'winner', 'winter', 'wire', 'wisdom', 'wise', 'wish', 'witness', 'wolf', 'woman', 'wonder', 'wood', 'wool', 'word', 'work', 'world', 'worry', 'worth', 'wrap', 'wreck', 'wrestle', 'wrist', 'write', 'wrong', 'yard', 'year', 'yellow', 'you', 'young', 'youth', 'zebra', 'zero', 'zone', 'zoo'];
 
 module.exports = english;
 },{}],306:[function(require,module,exports){
@@ -84399,12 +84399,12 @@ module.exports = require("./src/preconditions");
 (function (global){
 /**
  * @license
- * Lo-Square 2.4.2 (Custom Build) <https://l*o*d*a*s*h.com/>
- * Build: `l*o*d*a*s*h modern -o ./dist/l*o*d*a*s*h.js`
+ * Lo-Square 2.4.2 (Custom Build) <https://lodash.com/>
+ * Build: `lodash modern -o ./dist/lodash.js`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
- * Available under MIT license <https://l*o*d*a*s*h.com/license>
+ * Available under MIT license <https://lodash.com/license>
  */
 ;(function() {
 
@@ -84820,13 +84820,13 @@ module.exports = require("./src/preconditions");
   /*--------------------------------------------------------------------------*/
 
   /**
-   * Create a new `l*o*d*a*s*h` function using the given context object.
+   * Create a new `lodash` function using the given context object.
    *
    * @static
    * @memberOf _
    * @category Utilities
    * @param {Object} [context=root] The context object.
-   * @returns {Function} Returns the `l*o*d*a*s*h` function.
+   * @returns {Function} Returns the `lodash` function.
    */
   function runInContext(context) {
     // Avoid issues with some ES3 environments that attempt to use values, named
@@ -84894,7 +84894,7 @@ module.exports = require("./src/preconditions");
       return result;
     }());
 
-    /* Native method shortcuts for methods with the same name as other `l*o*d*a*s*h` methods */
+    /* Native method shortcuts for methods with the same name as other `lodash` methods */
     var nativeCreate = isNative(nativeCreate = Object.create) && nativeCreate,
         nativeIsArray = isNative(nativeIsArray = Array.isArray) && nativeIsArray,
         nativeIsFinite = context.isFinite,
@@ -84919,7 +84919,7 @@ module.exports = require("./src/preconditions");
     /*--------------------------------------------------------------------------*/
 
     /**
-     * Creates a `l*o*d*a*s*h` object which wraps the given value to enable intuitive
+     * Creates a `lodash` object which wraps the given value to enable intuitive
      * method chaining.
      *
      * In addition to Lo-Square methods, wrappers also have the following `Array` methods:
@@ -84960,8 +84960,8 @@ module.exports = require("./src/preconditions");
      * @name _
      * @constructor
      * @category Chaining
-     * @param {*} value The value to wrap in a `l*o*d*a*s*h` instance.
-     * @returns {Object} Returns a `l*o*d*a*s*h` instance.
+     * @param {*} value The value to wrap in a `lodash` instance.
+     * @returns {Object} Returns a `lodash` instance.
      * @example
      *
      * var wrapped = _([1, 2, 3]);
@@ -84983,27 +84983,27 @@ module.exports = require("./src/preconditions");
      * _.isArray(squares.value());
      * // => true
      */
-    function l*o*d*a*s*h(value) {
-      // don't wrap if already wrapped, even if wrapped by a different `l*o*d*a*s*h` constructor
+    function lodash(value) {
+      // don't wrap if already wrapped, even if wrapped by a different `lodash` constructor
       return (value && typeof value == 'object' && !isArray(value) && hasOwnProperty.call(value, '__wrapped__'))
        ? value
-       : new l*o*d*a*s*hWrapper(value);
+       : new lodashWrapper(value);
     }
 
     /**
-     * A fast path for creating `l*o*d*a*s*h` wrapper objects.
+     * A fast path for creating `lodash` wrapper objects.
      *
      * @private
-     * @param {*} value The value to wrap in a `l*o*d*a*s*h` instance.
+     * @param {*} value The value to wrap in a `lodash` instance.
      * @param {boolean} chainAll A flag to enable chaining for all methods
-     * @returns {Object} Returns a `l*o*d*a*s*h` instance.
+     * @returns {Object} Returns a `lodash` instance.
      */
-    function l*o*d*a*s*hWrapper(value, chainAll) {
+    function lodashWrapper(value, chainAll) {
       this.__chain__ = !!chainAll;
       this.__wrapped__ = value;
     }
-    // ensure `new l*o*d*a*s*hWrapper` is an instance of `l*o*d*a*s*h`
-    l*o*d*a*s*hWrapper.prototype = l*o*d*a*s*h.prototype;
+    // ensure `new lodashWrapper` is an instance of `lodash`
+    lodashWrapper.prototype = lodash.prototype;
 
     /**
      * An object used to flag environments features.
@@ -85012,7 +85012,7 @@ module.exports = require("./src/preconditions");
      * @memberOf _
      * @type Object
      */
-    var support = l*o*d*a*s*h.support = {};
+    var support = lodash.support = {};
 
     /**
      * Detect if functions can be decompiled by `Function#toString`
@@ -85040,7 +85040,7 @@ module.exports = require("./src/preconditions");
      * @memberOf _
      * @type Object
      */
-    l*o*d*a*s*h.templateSettings = {
+    lodash.templateSettings = {
 
       /**
        * Used to detect `data` property values to be HTML-escaped.
@@ -85083,12 +85083,12 @@ module.exports = require("./src/preconditions");
       'imports': {
 
         /**
-         * A reference to the `l*o*d*a*s*h` function.
+         * A reference to the `lodash` function.
          *
          * @memberOf _.templateSettings.imports
          * @type Function
          */
-        '_': l*o*d*a*s*h
+        '_': lodash
       }
     };
 
@@ -85511,7 +85511,7 @@ module.exports = require("./src/preconditions");
       }
       var isArr = className == arrayClass;
       if (!isArr) {
-        // unwrap any `l*o*d*a*s*h` wrapped values
+        // unwrap any `lodash` wrapped values
         var aWrapped = hasOwnProperty.call(a, '__wrapped__'),
             bWrapped = hasOwnProperty.call(b, '__wrapped__');
 
@@ -85749,7 +85749,7 @@ module.exports = require("./src/preconditions");
     function createAggregator(setter) {
       return function(collection, callback, thisArg) {
         var result = {};
-        callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+        callback = lodash.createCallback(callback, thisArg, 3);
 
         var index = -1,
             length = collection ? collection.length : 0;
@@ -85868,7 +85868,7 @@ module.exports = require("./src/preconditions");
      * @returns {Function} Returns the "indexOf" function.
      */
     function getIndexOf() {
-      var result = (result = l*o*d*a*s*h.indexOf) === indexOf ? baseIndexOf : result;
+      var result = (result = lodash.indexOf) === indexOf ? baseIndexOf : result;
       return result;
     }
 
@@ -86320,7 +86320,7 @@ module.exports = require("./src/preconditions");
      */
     function findKey(object, callback, thisArg) {
       var result;
-      callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+      callback = lodash.createCallback(callback, thisArg, 3);
       forOwn(object, function(value, key, object) {
         if (callback(value, key, object)) {
           result = key;
@@ -86373,7 +86373,7 @@ module.exports = require("./src/preconditions");
      */
     function findLastKey(object, callback, thisArg) {
       var result;
-      callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+      callback = lodash.createCallback(callback, thisArg, 3);
       forOwnRight(object, function(value, key, object) {
         if (callback(value, key, object)) {
           result = key;
@@ -87016,7 +87016,7 @@ module.exports = require("./src/preconditions");
      */
     function mapValues(object, callback, thisArg) {
       var result = {};
-      callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+      callback = lodash.createCallback(callback, thisArg, 3);
 
       forOwn(object, function(value, key, object) {
         result[key] = callback(value, key, object);
@@ -87148,7 +87148,7 @@ module.exports = require("./src/preconditions");
           result[key] = object[key];
         }
       } else {
-        callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+        callback = lodash.createCallback(callback, thisArg, 3);
         forIn(object, function(value, key, object) {
           if (!callback(value, key, object)) {
             result[key] = value;
@@ -87226,7 +87226,7 @@ module.exports = require("./src/preconditions");
           }
         }
       } else {
-        callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+        callback = lodash.createCallback(callback, thisArg, 3);
         forIn(object, function(value, key, object) {
           if (callback(value, key, object)) {
             result[key] = value;
@@ -87280,7 +87280,7 @@ module.exports = require("./src/preconditions");
         }
       }
       if (callback) {
-        callback = l*o*d*a*s*h.createCallback(callback, thisArg, 4);
+        callback = lodash.createCallback(callback, thisArg, 4);
         (isArr ? forEach : forOwn)(object, function(value, index, object) {
           return callback(accumulator, value, index, object);
         });
@@ -87478,7 +87478,7 @@ module.exports = require("./src/preconditions");
      */
     function every(collection, callback, thisArg) {
       var result = true;
-      callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+      callback = lodash.createCallback(callback, thisArg, 3);
 
       var index = -1,
           length = collection ? collection.length : 0;
@@ -87539,7 +87539,7 @@ module.exports = require("./src/preconditions");
      */
     function filter(collection, callback, thisArg) {
       var result = [];
-      callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+      callback = lodash.createCallback(callback, thisArg, 3);
 
       var index = -1,
           length = collection ? collection.length : 0;
@@ -87605,7 +87605,7 @@ module.exports = require("./src/preconditions");
      * // => { 'name': 'fred', 'age': 40, 'blocked': true }
      */
     function find(collection, callback, thisArg) {
-      callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+      callback = lodash.createCallback(callback, thisArg, 3);
 
       var index = -1,
           length = collection ? collection.length : 0;
@@ -87651,7 +87651,7 @@ module.exports = require("./src/preconditions");
      */
     function findLast(collection, callback, thisArg) {
       var result;
-      callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+      callback = lodash.createCallback(callback, thisArg, 3);
       forEachRight(collection, function(value, index, collection) {
         if (callback(value, index, collection)) {
           result = value;
@@ -87901,7 +87901,7 @@ module.exports = require("./src/preconditions");
       var index = -1,
           length = collection ? collection.length : 0;
 
-      callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+      callback = lodash.createCallback(callback, thisArg, 3);
       if (typeof length == 'number') {
         var result = Array(length);
         while (++index < length) {
@@ -87978,7 +87978,7 @@ module.exports = require("./src/preconditions");
       } else {
         callback = (callback == null && isString(collection))
           ? charAtCallback
-          : l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+          : lodash.createCallback(callback, thisArg, 3);
 
         forEach(collection, function(value, index, collection) {
           var current = callback(value, index, collection);
@@ -88053,7 +88053,7 @@ module.exports = require("./src/preconditions");
       } else {
         callback = (callback == null && isString(collection))
           ? charAtCallback
-          : l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+          : lodash.createCallback(callback, thisArg, 3);
 
         forEach(collection, function(value, index, collection) {
           var current = callback(value, index, collection);
@@ -88121,7 +88121,7 @@ module.exports = require("./src/preconditions");
     function reduce(collection, callback, accumulator, thisArg) {
       if (!collection) return accumulator;
       var noaccum = arguments.length < 3;
-      callback = l*o*d*a*s*h.createCallback(callback, thisArg, 4);
+      callback = lodash.createCallback(callback, thisArg, 4);
 
       var index = -1,
           length = collection.length;
@@ -88164,7 +88164,7 @@ module.exports = require("./src/preconditions");
      */
     function reduceRight(collection, callback, accumulator, thisArg) {
       var noaccum = arguments.length < 3;
-      callback = l*o*d*a*s*h.createCallback(callback, thisArg, 4);
+      callback = lodash.createCallback(callback, thisArg, 4);
       forEachRight(collection, function(value, index, collection) {
         accumulator = noaccum
           ? (noaccum = false, value)
@@ -88212,7 +88212,7 @@ module.exports = require("./src/preconditions");
      * // => [{ 'name': 'fred', 'age': 40, 'blocked': true }]
      */
     function reject(collection, callback, thisArg) {
-      callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+      callback = lodash.createCallback(callback, thisArg, 3);
       return filter(collection, function(value, index, collection) {
         return !callback(value, index, collection);
       });
@@ -88345,7 +88345,7 @@ module.exports = require("./src/preconditions");
      */
     function some(collection, callback, thisArg) {
       var result;
-      callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+      callback = lodash.createCallback(callback, thisArg, 3);
 
       var index = -1,
           length = collection ? collection.length : 0;
@@ -88420,7 +88420,7 @@ module.exports = require("./src/preconditions");
           result = Array(typeof length == 'number' ? length : 0);
 
       if (!isArr) {
-        callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+        callback = lodash.createCallback(callback, thisArg, 3);
       }
       forEach(collection, function(value, key, collection) {
         var object = result[++index] = getObject();
@@ -88587,7 +88587,7 @@ module.exports = require("./src/preconditions");
       var index = -1,
           length = array ? array.length : 0;
 
-      callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+      callback = lodash.createCallback(callback, thisArg, 3);
       while (++index < length) {
         if (callback(array[index], index, array)) {
           return index;
@@ -88639,7 +88639,7 @@ module.exports = require("./src/preconditions");
      */
     function findLastIndex(array, callback, thisArg) {
       var length = array ? array.length : 0;
-      callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+      callback = lodash.createCallback(callback, thisArg, 3);
       while (length--) {
         if (callback(array[length], length, array)) {
           return length;
@@ -88705,7 +88705,7 @@ module.exports = require("./src/preconditions");
 
       if (typeof callback != 'number' && callback != null) {
         var index = -1;
-        callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+        callback = lodash.createCallback(callback, thisArg, 3);
         while (++index < length && callback(array[index], index, array)) {
           n++;
         }
@@ -88863,7 +88863,7 @@ module.exports = require("./src/preconditions");
 
       if (typeof callback != 'number' && callback != null) {
         var index = length;
-        callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+        callback = lodash.createCallback(callback, thisArg, 3);
         while (index-- && callback(array[index], index, array)) {
           n++;
         }
@@ -88993,7 +88993,7 @@ module.exports = require("./src/preconditions");
 
       if (typeof callback != 'number' && callback != null) {
         var index = length;
-        callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+        callback = lodash.createCallback(callback, thisArg, 3);
         while (index-- && callback(array[index], index, array)) {
           n++;
         }
@@ -89172,7 +89172,7 @@ module.exports = require("./src/preconditions");
           length = array ? array.length : 0,
           result = [];
 
-      callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+      callback = lodash.createCallback(callback, thisArg, 3);
       while (++index < length) {
         var value = array[index];
         if (callback(value, index, array)) {
@@ -89242,7 +89242,7 @@ module.exports = require("./src/preconditions");
             index = -1,
             length = array ? array.length : 0;
 
-        callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+        callback = lodash.createCallback(callback, thisArg, 3);
         while (++index < length && callback(array[index], index, array)) {
           n++;
         }
@@ -89305,7 +89305,7 @@ module.exports = require("./src/preconditions");
           high = array ? array.length : low;
 
       // explicitly reference `identity` for better inlining in Firefox
-      callback = callback ? l*o*d*a*s*h.createCallback(callback, thisArg, 1) : identity;
+      callback = callback ? lodash.createCallback(callback, thisArg, 1) : identity;
       value = callback(value);
 
       while (low < high) {
@@ -89387,7 +89387,7 @@ module.exports = require("./src/preconditions");
         isSorted = false;
       }
       if (callback != null) {
-        callback = l*o*d*a*s*h.createCallback(callback, thisArg, 3);
+        callback = lodash.createCallback(callback, thisArg, 3);
       }
       return baseUniq(array, isSorted, callback);
     }
@@ -90270,7 +90270,7 @@ module.exports = require("./src/preconditions");
      * @static
      * @memberOf _
      * @category Utilities
-     * @param {Function|Object} [object=l*o*d*a*s*h] object The destination object.
+     * @param {Function|Object} [object=lodash] object The destination object.
      * @param {Object} source The object of functions to add.
      * @param {Object} [options] The options object.
      * @param {boolean} [options.chain=true] Specify whether the functions added are chainable.
@@ -90299,9 +90299,9 @@ module.exports = require("./src/preconditions");
         if (options == null) {
           options = source;
         }
-        ctor = l*o*d*a*s*hWrapper;
+        ctor = lodashWrapper;
         source = object;
-        object = l*o*d*a*s*h;
+        object = lodash;
         methodNames = functions(source);
       }
       if (options === false) {
@@ -90337,15 +90337,15 @@ module.exports = require("./src/preconditions");
 
     /**
      * Reverts the '_' variable to its previous value and returns a reference to
-     * the `l*o*d*a*s*h` function.
+     * the `lodash` function.
      *
      * @static
      * @memberOf _
      * @category Utilities
-     * @returns {Function} Returns the `l*o*d*a*s*h` function.
+     * @returns {Function} Returns the `lodash` function.
      * @example
      *
-     * var l*o*d*a*s*h = _.noConflict();
+     * var lodash = _.noConflict();
      */
     function noConflict() {
       context._ = oldSquare;
@@ -90539,7 +90539,7 @@ module.exports = require("./src/preconditions");
      * debugging. See http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/#toc-sourceurl
      *
      * For more information on precompiling templates see:
-     * https://l*o*d*a*s*h.com/custom-builds
+     * https://lodash.com/custom-builds
      *
      * For more information on Chrome extension sandboxes see:
      * http://developer.chrome.com/stable/extensions/sandboxingEval.html
@@ -90622,7 +90622,7 @@ module.exports = require("./src/preconditions");
       // http://ejohn.org/blog/javascript-micro-templating/
       // and Laura Doktorova's doT.js
       // https://github.com/olado/doT
-      var settings = l*o*d*a*s*h.templateSettings;
+      var settings = lodash.templateSettings;
       text = String(text || '');
 
       // avoid missing dependencies when `iteratorTemplate` is not defined
@@ -90699,7 +90699,7 @@ module.exports = require("./src/preconditions");
 
       // Use a sourceURL for easier debugging.
       // http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/#toc-sourceurl
-      var sourceURL = '\n/*\n//# sourceURL=' + (options.sourceURL || '/l*o*d*a*s*h/template/source[' + (templateCounter++) + ']') + '\n*/';
+      var sourceURL = '\n/*\n//# sourceURL=' + (options.sourceURL || '/lodash/template/source[' + (templateCounter++) + ']') + '\n*/';
 
       try {
         var result = Function(importsKeys, 'return ' + source + sourceURL).apply(undefined, importsValues);
@@ -90795,7 +90795,7 @@ module.exports = require("./src/preconditions");
     /*--------------------------------------------------------------------------*/
 
     /**
-     * Creates a `l*o*d*a*s*h` object that wraps the given value with explicit
+     * Creates a `lodash` object that wraps the given value with explicit
      * method chaining enabled.
      *
      * @static
@@ -90819,7 +90819,7 @@ module.exports = require("./src/preconditions");
      * // => 'pebbles is 1'
      */
     function chain(value) {
-      value = new l*o*d*a*s*hWrapper(value);
+      value = new lodashWrapper(value);
       value.__chain__ = true;
       return value;
     }
@@ -90915,159 +90915,159 @@ module.exports = require("./src/preconditions");
     /*--------------------------------------------------------------------------*/
 
     // add functions that return wrapped values when chaining
-    l*o*d*a*s*h.after = after;
-    l*o*d*a*s*h.assign = assign;
-    l*o*d*a*s*h.at = at;
-    l*o*d*a*s*h.bind = bind;
-    l*o*d*a*s*h.bindAll = bindAll;
-    l*o*d*a*s*h.bindKey = bindKey;
-    l*o*d*a*s*h.chain = chain;
-    l*o*d*a*s*h.compact = compact;
-    l*o*d*a*s*h.compose = compose;
-    l*o*d*a*s*h.constant = constant;
-    l*o*d*a*s*h.countBy = countBy;
-    l*o*d*a*s*h.create = create;
-    l*o*d*a*s*h.createCallback = createCallback;
-    l*o*d*a*s*h.curry = curry;
-    l*o*d*a*s*h.debounce = debounce;
-    l*o*d*a*s*h.defaults = defaults;
-    l*o*d*a*s*h.defer = defer;
-    l*o*d*a*s*h.delay = delay;
-    l*o*d*a*s*h.difference = difference;
-    l*o*d*a*s*h.filter = filter;
-    l*o*d*a*s*h.flatten = flatten;
-    l*o*d*a*s*h.forEach = forEach;
-    l*o*d*a*s*h.forEachRight = forEachRight;
-    l*o*d*a*s*h.forIn = forIn;
-    l*o*d*a*s*h.forInRight = forInRight;
-    l*o*d*a*s*h.forOwn = forOwn;
-    l*o*d*a*s*h.forOwnRight = forOwnRight;
-    l*o*d*a*s*h.functions = functions;
-    l*o*d*a*s*h.groupBy = groupBy;
-    l*o*d*a*s*h.indexBy = indexBy;
-    l*o*d*a*s*h.initial = initial;
-    l*o*d*a*s*h.intersection = intersection;
-    l*o*d*a*s*h.invert = invert;
-    l*o*d*a*s*h.invoke = invoke;
-    l*o*d*a*s*h.keys = keys;
-    l*o*d*a*s*h.map = map;
-    l*o*d*a*s*h.mapValues = mapValues;
-    l*o*d*a*s*h.max = max;
-    l*o*d*a*s*h.memoize = memoize;
-    l*o*d*a*s*h.merge = merge;
-    l*o*d*a*s*h.min = min;
-    l*o*d*a*s*h.omit = omit;
-    l*o*d*a*s*h.once = once;
-    l*o*d*a*s*h.pairs = pairs;
-    l*o*d*a*s*h.partial = partial;
-    l*o*d*a*s*h.partialRight = partialRight;
-    l*o*d*a*s*h.pick = pick;
-    l*o*d*a*s*h.pluck = pluck;
-    l*o*d*a*s*h.property = property;
-    l*o*d*a*s*h.pull = pull;
-    l*o*d*a*s*h.range = range;
-    l*o*d*a*s*h.reject = reject;
-    l*o*d*a*s*h.remove = remove;
-    l*o*d*a*s*h.rest = rest;
-    l*o*d*a*s*h.shuffle = shuffle;
-    l*o*d*a*s*h.sortBy = sortBy;
-    l*o*d*a*s*h.tap = tap;
-    l*o*d*a*s*h.throttle = throttle;
-    l*o*d*a*s*h.times = times;
-    l*o*d*a*s*h.toArray = toArray;
-    l*o*d*a*s*h.transform = transform;
-    l*o*d*a*s*h.union = union;
-    l*o*d*a*s*h.uniq = uniq;
-    l*o*d*a*s*h.values = values;
-    l*o*d*a*s*h.where = where;
-    l*o*d*a*s*h.without = without;
-    l*o*d*a*s*h.wrap = wrap;
-    l*o*d*a*s*h.xor = xor;
-    l*o*d*a*s*h.zip = zip;
-    l*o*d*a*s*h.zipObject = zipObject;
+    lodash.after = after;
+    lodash.assign = assign;
+    lodash.at = at;
+    lodash.bind = bind;
+    lodash.bindAll = bindAll;
+    lodash.bindKey = bindKey;
+    lodash.chain = chain;
+    lodash.compact = compact;
+    lodash.compose = compose;
+    lodash.constant = constant;
+    lodash.countBy = countBy;
+    lodash.create = create;
+    lodash.createCallback = createCallback;
+    lodash.curry = curry;
+    lodash.debounce = debounce;
+    lodash.defaults = defaults;
+    lodash.defer = defer;
+    lodash.delay = delay;
+    lodash.difference = difference;
+    lodash.filter = filter;
+    lodash.flatten = flatten;
+    lodash.forEach = forEach;
+    lodash.forEachRight = forEachRight;
+    lodash.forIn = forIn;
+    lodash.forInRight = forInRight;
+    lodash.forOwn = forOwn;
+    lodash.forOwnRight = forOwnRight;
+    lodash.functions = functions;
+    lodash.groupBy = groupBy;
+    lodash.indexBy = indexBy;
+    lodash.initial = initial;
+    lodash.intersection = intersection;
+    lodash.invert = invert;
+    lodash.invoke = invoke;
+    lodash.keys = keys;
+    lodash.map = map;
+    lodash.mapValues = mapValues;
+    lodash.max = max;
+    lodash.memoize = memoize;
+    lodash.merge = merge;
+    lodash.min = min;
+    lodash.omit = omit;
+    lodash.once = once;
+    lodash.pairs = pairs;
+    lodash.partial = partial;
+    lodash.partialRight = partialRight;
+    lodash.pick = pick;
+    lodash.pluck = pluck;
+    lodash.property = property;
+    lodash.pull = pull;
+    lodash.range = range;
+    lodash.reject = reject;
+    lodash.remove = remove;
+    lodash.rest = rest;
+    lodash.shuffle = shuffle;
+    lodash.sortBy = sortBy;
+    lodash.tap = tap;
+    lodash.throttle = throttle;
+    lodash.times = times;
+    lodash.toArray = toArray;
+    lodash.transform = transform;
+    lodash.union = union;
+    lodash.uniq = uniq;
+    lodash.values = values;
+    lodash.where = where;
+    lodash.without = without;
+    lodash.wrap = wrap;
+    lodash.xor = xor;
+    lodash.zip = zip;
+    lodash.zipObject = zipObject;
 
     // add aliases
-    l*o*d*a*s*h.collect = map;
-    l*o*d*a*s*h.drop = rest;
-    l*o*d*a*s*h.each = forEach;
-    l*o*d*a*s*h.eachRight = forEachRight;
-    l*o*d*a*s*h.extend = assign;
-    l*o*d*a*s*h.methods = functions;
-    l*o*d*a*s*h.object = zipObject;
-    l*o*d*a*s*h.select = filter;
-    l*o*d*a*s*h.tail = rest;
-    l*o*d*a*s*h.unique = uniq;
-    l*o*d*a*s*h.unzip = zip;
+    lodash.collect = map;
+    lodash.drop = rest;
+    lodash.each = forEach;
+    lodash.eachRight = forEachRight;
+    lodash.extend = assign;
+    lodash.methods = functions;
+    lodash.object = zipObject;
+    lodash.select = filter;
+    lodash.tail = rest;
+    lodash.unique = uniq;
+    lodash.unzip = zip;
 
-    // add functions to `l*o*d*a*s*h.prototype`
-    mixin(l*o*d*a*s*h);
+    // add functions to `lodash.prototype`
+    mixin(lodash);
 
     /*--------------------------------------------------------------------------*/
 
     // add functions that return unwrapped values when chaining
-    l*o*d*a*s*h.clone = clone;
-    l*o*d*a*s*h.cloneDeep = cloneDeep;
-    l*o*d*a*s*h.contains = contains;
-    l*o*d*a*s*h.escape = escape;
-    l*o*d*a*s*h.every = every;
-    l*o*d*a*s*h.find = find;
-    l*o*d*a*s*h.findIndex = findIndex;
-    l*o*d*a*s*h.findKey = findKey;
-    l*o*d*a*s*h.findLast = findLast;
-    l*o*d*a*s*h.findLastIndex = findLastIndex;
-    l*o*d*a*s*h.findLastKey = findLastKey;
-    l*o*d*a*s*h.has = has;
-    l*o*d*a*s*h.identity = identity;
-    l*o*d*a*s*h.indexOf = indexOf;
-    l*o*d*a*s*h.isArguments = isArguments;
-    l*o*d*a*s*h.isArray = isArray;
-    l*o*d*a*s*h.isBoolean = isBoolean;
-    l*o*d*a*s*h.isDate = isDate;
-    l*o*d*a*s*h.isElement = isElement;
-    l*o*d*a*s*h.isEmpty = isEmpty;
-    l*o*d*a*s*h.isEqual = isEqual;
-    l*o*d*a*s*h.isFinite = isFinite;
-    l*o*d*a*s*h.isFunction = isFunction;
-    l*o*d*a*s*h.isNaN = isNaN;
-    l*o*d*a*s*h.isNull = isNull;
-    l*o*d*a*s*h.isNumber = isNumber;
-    l*o*d*a*s*h.isObject = isObject;
-    l*o*d*a*s*h.isPlainObject = isPlainObject;
-    l*o*d*a*s*h.isRegExp = isRegExp;
-    l*o*d*a*s*h.isString = isString;
-    l*o*d*a*s*h.isUndefined = isUndefined;
-    l*o*d*a*s*h.lastIndexOf = lastIndexOf;
-    l*o*d*a*s*h.mixin = mixin;
-    l*o*d*a*s*h.noConflict = noConflict;
-    l*o*d*a*s*h.noop = noop;
-    l*o*d*a*s*h.now = now;
-    l*o*d*a*s*h.parseInt = parseInt;
-    l*o*d*a*s*h.random = random;
-    l*o*d*a*s*h.reduce = reduce;
-    l*o*d*a*s*h.reduceRight = reduceRight;
-    l*o*d*a*s*h.result = result;
-    l*o*d*a*s*h.runInContext = runInContext;
-    l*o*d*a*s*h.size = size;
-    l*o*d*a*s*h.some = some;
-    l*o*d*a*s*h.sortedIndex = sortedIndex;
-    l*o*d*a*s*h.template = template;
-    l*o*d*a*s*h.unescape = unescape;
-    l*o*d*a*s*h.uniqueId = uniqueId;
+    lodash.clone = clone;
+    lodash.cloneDeep = cloneDeep;
+    lodash.contains = contains;
+    lodash.escape = escape;
+    lodash.every = every;
+    lodash.find = find;
+    lodash.findIndex = findIndex;
+    lodash.findKey = findKey;
+    lodash.findLast = findLast;
+    lodash.findLastIndex = findLastIndex;
+    lodash.findLastKey = findLastKey;
+    lodash.has = has;
+    lodash.identity = identity;
+    lodash.indexOf = indexOf;
+    lodash.isArguments = isArguments;
+    lodash.isArray = isArray;
+    lodash.isBoolean = isBoolean;
+    lodash.isDate = isDate;
+    lodash.isElement = isElement;
+    lodash.isEmpty = isEmpty;
+    lodash.isEqual = isEqual;
+    lodash.isFinite = isFinite;
+    lodash.isFunction = isFunction;
+    lodash.isNaN = isNaN;
+    lodash.isNull = isNull;
+    lodash.isNumber = isNumber;
+    lodash.isObject = isObject;
+    lodash.isPlainObject = isPlainObject;
+    lodash.isRegExp = isRegExp;
+    lodash.isString = isString;
+    lodash.isUndefined = isUndefined;
+    lodash.lastIndexOf = lastIndexOf;
+    lodash.mixin = mixin;
+    lodash.noConflict = noConflict;
+    lodash.noop = noop;
+    lodash.now = now;
+    lodash.parseInt = parseInt;
+    lodash.random = random;
+    lodash.reduce = reduce;
+    lodash.reduceRight = reduceRight;
+    lodash.result = result;
+    lodash.runInContext = runInContext;
+    lodash.size = size;
+    lodash.some = some;
+    lodash.sortedIndex = sortedIndex;
+    lodash.template = template;
+    lodash.unescape = unescape;
+    lodash.uniqueId = uniqueId;
 
     // add aliases
-    l*o*d*a*s*h.all = every;
-    l*o*d*a*s*h.any = some;
-    l*o*d*a*s*h.detect = find;
-    l*o*d*a*s*h.findWhere = find;
-    l*o*d*a*s*h.foldl = reduce;
-    l*o*d*a*s*h.foldr = reduceRight;
-    l*o*d*a*s*h.include = contains;
-    l*o*d*a*s*h.inject = reduce;
+    lodash.all = every;
+    lodash.any = some;
+    lodash.detect = find;
+    lodash.findWhere = find;
+    lodash.foldl = reduce;
+    lodash.foldr = reduceRight;
+    lodash.include = contains;
+    lodash.inject = reduce;
 
     mixin(function() {
       var source = {}
-      forOwn(l*o*d*a*s*h, function(func, methodName) {
-        if (!l*o*d*a*s*h.prototype[methodName]) {
+      forOwn(lodash, function(func, methodName) {
+        if (!lodash.prototype[methodName]) {
           source[methodName] = func;
         }
       });
@@ -91077,24 +91077,24 @@ module.exports = require("./src/preconditions");
     /*--------------------------------------------------------------------------*/
 
     // add functions capable of returning wrapped and unwrapped values when chaining
-    l*o*d*a*s*h.first = first;
-    l*o*d*a*s*h.last = last;
-    l*o*d*a*s*h.sample = sample;
+    lodash.first = first;
+    lodash.last = last;
+    lodash.sample = sample;
 
     // add aliases
-    l*o*d*a*s*h.take = first;
-    l*o*d*a*s*h.head = first;
+    lodash.take = first;
+    lodash.head = first;
 
-    forOwn(l*o*d*a*s*h, function(func, methodName) {
+    forOwn(lodash, function(func, methodName) {
       var callbackable = methodName !== 'sample';
-      if (!l*o*d*a*s*h.prototype[methodName]) {
-        l*o*d*a*s*h.prototype[methodName]= function(n, guard) {
+      if (!lodash.prototype[methodName]) {
+        lodash.prototype[methodName]= function(n, guard) {
           var chainAll = this.__chain__,
               result = func(this.__wrapped__, n, guard);
 
           return !chainAll && (n == null || (guard && !(callbackable && typeof n == 'function')))
             ? result
-            : new l*o*d*a*s*hWrapper(result, chainAll);
+            : new lodashWrapper(result, chainAll);
         };
       }
     });
@@ -91108,23 +91108,23 @@ module.exports = require("./src/preconditions");
      * @memberOf _
      * @type string
      */
-    l*o*d*a*s*h.VERSION = '2.4.2';
+    lodash.VERSION = '2.4.2';
 
     // add "Chaining" functions to the wrapper
-    l*o*d*a*s*h.prototype.chain = wrapperChain;
-    l*o*d*a*s*h.prototype.toString = wrapperToString;
-    l*o*d*a*s*h.prototype.value = wrapperValueOf;
-    l*o*d*a*s*h.prototype.valueOf = wrapperValueOf;
+    lodash.prototype.chain = wrapperChain;
+    lodash.prototype.toString = wrapperToString;
+    lodash.prototype.value = wrapperValueOf;
+    lodash.prototype.valueOf = wrapperValueOf;
 
     // add `Array` functions that return unwrapped values
     forEach(['join', 'pop', 'shift'], function(methodName) {
       var func = arrayRef[methodName];
-      l*o*d*a*s*h.prototype[methodName] = function() {
+      lodash.prototype[methodName] = function() {
         var chainAll = this.__chain__,
             result = func.apply(this.__wrapped__, arguments);
 
         return chainAll
-          ? new l*o*d*a*s*hWrapper(result, chainAll)
+          ? new lodashWrapper(result, chainAll)
           : result;
       };
     });
@@ -91132,7 +91132,7 @@ module.exports = require("./src/preconditions");
     // add `Array` functions that return the existing wrapped value
     forEach(['push', 'reverse', 'sort', 'unshift'], function(methodName) {
       var func = arrayRef[methodName];
-      l*o*d*a*s*h.prototype[methodName] = function() {
+      lodash.prototype[methodName] = function() {
         func.apply(this.__wrapped__, arguments);
         return this;
       };
@@ -91141,12 +91141,12 @@ module.exports = require("./src/preconditions");
     // add `Array` functions that return new wrapped values
     forEach(['concat', 'slice', 'splice'], function(methodName) {
       var func = arrayRef[methodName];
-      l*o*d*a*s*h.prototype[methodName] = function() {
-        return new l*o*d*a*s*hWrapper(func.apply(this.__wrapped__, arguments), this.__chain__);
+      lodash.prototype[methodName] = function() {
+        return new lodashWrapper(func.apply(this.__wrapped__, arguments), this.__chain__);
       };
     });
 
-    return l*o*d*a*s*h;
+    return lodash;
   }
 
   /*--------------------------------------------------------------------------*/
@@ -91233,7 +91233,7 @@ exports.StartBeforeEnd = "Start value should be less than the end value.";
 "use strict";
 
 var validatorFunctions = require("./validatorFunctions"),
-  _ = require("l*o*d*a*s*h");
+  _ = require("lodash");
 
 function Preconditions (objectUnderTest) {
   //out = Object Under Test
@@ -91497,11 +91497,11 @@ module.exports = {
   }
 
 };
-},{"./validatorFunctions":365,"l*o*d*a*s*h":362}],365:[function(require,module,exports){
+},{"./validatorFunctions":365,"lodash":362}],365:[function(require,module,exports){
 "use strict";
 
 var constants = require("./constants"),
-  _ = require("l*o*d*a*s*h");
+  _ = require("lodash");
 
 var validatorFunctions = {
   shouldBeDefined: function (val, message) {
@@ -91729,7 +91729,7 @@ var validatorFunctions = {
 };
 
 module.exports = validatorFunctions;
-},{"./constants":363,"l*o*d*a*s*h":362}],366:[function(require,module,exports){
+},{"./constants":363,"lodash":362}],366:[function(require,module,exports){
 (function (process){
 /*
  Copyright 2013 Daniel Wirtz <dcode@dcode.io>
@@ -99481,7 +99481,7 @@ module.exports={
     "bitcore-mnemonic-square": "https://Big-Brother:566e87145f7d24cf2ede7e308370070332b25882@github.com/Big-Brother/bitcore-mnemonic-square",
     "bitcore-payment-protocol-square": "https://Big-Brother:566e87145f7d24cf2ede7e308370070332b25882@github.com/Big-Brother/bitcore-payment-protocol-square",
     "json-stable-stringify": "^1.0.0",
-    "l*o*d*a*s*h": "^3.3.1",
+    "lodash": "^3.3.1",
     "preconditions": "^1.0.8",
     "sjcl": "1.0.3",
     "superagent": "^3.4.1"
