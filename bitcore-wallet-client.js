@@ -72681,7 +72681,7 @@ module.exports={
     "lint": "gulp lint",
     "test": "gulp test"
   },
-  "version": "0.14.3"
+  "version": "0.15.3"
 }
 
 },{}],300:[function(require,module,exports){
