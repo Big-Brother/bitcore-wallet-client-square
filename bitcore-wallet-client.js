@@ -34789,14 +34789,7 @@ var bitcore = module.exports;
 
 // module information
 bitcore.version = 'v' + require('./package.json').version;
-bitcore.versionGuard = function(version) {
-  if (version !== undefined) {
-    var message = 'More than one instance of bitcore-lib found. ' + 
-      'Please make sure that you are not mixing instances of classes of the different versions of bitcore.';
-    console.warn(message);
-  }
-};
-bitcore.versionGuard(global._bitcore);
+
 global._bitcore = bitcore.version;
 
 // crypto
@@ -72454,8 +72447,8 @@ module.exports={
         "scope": null,
         "escapedName": "bitcore-lib-square",
         "name": "bitcore-lib-square",
-        "rawSpec": "^0.14.3",
-        "spec": ">=0.14.3 <0.15.0",
+        "rawSpec": "^0.15.3",
+        "spec": ">=0.15.3 <0.16.0",
         "type": "range"
       },
       "F:\\_2018\\Github\\namespace\\Big-Brother\\bitcore-wallet-client-square"
@@ -72481,7 +72474,7 @@ module.exports={
     "scope": null,
     "escapedName": "bitcore-lib-square",
     "name": "bitcore-lib-square",
-    "rawSpec": "^0.14.3",
+    "rawSpec": "^0.15.3",
     "spec": ">=0.15.3 <0.16.0",
     "type": "range"
   },
